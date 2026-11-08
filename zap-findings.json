@@ -1,0 +1,166 @@
+{
+  "@programName": "OWASP ZAP",
+  "@version": "2.14.0",
+  "@generated": "2026-10-17T08:00:00Z",
+  "site": [
+    {
+      "@name": "http://target.local",
+      "@host": "target.local",
+      "@port": "80",
+      "@ssl": "false",
+      "alerts": [
+        {
+          "pluginid": "40018",
+          "alertRef": "40018",
+          "alert": "SQL Injection",
+          "name": "SQL Injection",
+          "riskcode": "3",
+          "confidence": "3",
+          "riskdesc": "High (High)",
+          "desc": "SQL injection may be possible, allowing an attacker to manipulate backend queries.",
+          "instances": [
+            {
+              "uri": "http://target.local/api/items?id=1",
+              "method": "GET",
+              "param": "id",
+              "attack": "1' OR '1'='1",
+              "evidence": "syntax error near 'OR'",
+              "otherinfo": "Backend database appears to be PostgreSQL."
+            }
+          ],
+          "count": "1",
+          "solution": "Use parameterized queries or prepared statements to ensure user input cannot modify SQL commands.",
+          "otherinfo": "",
+          "reference": "https://owasp.org/www-community/attacks/SQL_Injection",
+          "cweid": "89",
+          "wascid": "19",
+          "sourceid": "1"
+        },
+        {
+          "pluginid": "40012",
+          "alertRef": "40012",
+          "alert": "Cross Site Scripting (Reflected)",
+          "name": "Cross Site Scripting (Reflected)",
+          "riskcode": "3",
+          "confidence": "2",
+          "riskdesc": "High (Medium)",
+          "desc": "Cross-site Scripting (XSS) is an attack where malicious scripts are injected into otherwise benign websites.",
+          "instances": [
+            {
+              "uri": "http://target.local/search.php?query=test",
+              "method": "GET",
+              "param": "query",
+              "attack": "<script>alert('XSS-1')</script>",
+              "evidence": "<script>alert('XSS-1')</script>",
+              "otherinfo": "Reflected in search results header"
+            },
+            {
+              "uri": "http://target.local/lookup.php?search=term",
+              "method": "GET",
+              "param": "search",
+              "attack": "<script>alert('XSS-2')</script>",
+              "evidence": "<script>alert('XSS-2')</script>",
+              "otherinfo": "Reflected in input value attribute"
+            }
+          ],
+          "count": "2",
+          "solution": "Context-aware output encoding should be applied before user data is rendered into HTML.",
+          "otherinfo": "",
+          "reference": "https://owasp.org/www-community/attacks/xss/",
+          "cweid": "79",
+          "wascid": "14",
+          "sourceid": "1"
+        },
+        {
+          "pluginid": "10020",
+          "alertRef": "10020",
+          "alert": "X-Frame-Options Header Not Set",
+          "name": "X-Frame-Options Header Not Set",
+          "riskcode": "2",
+          "confidence": "2",
+          "riskdesc": "Medium (Medium)",
+          "desc": "The response does not include either Content-Security-Policy with 'frame-ancestors' directive or X-Frame-Options to protect against Clickjacking.",
+          "instances": [
+            {
+              "uri": "http://target.local/login",
+              "method": "GET",
+              "param": "",
+              "attack": "",
+              "evidence": "",
+              "otherinfo": "Missing header on sensitive authentication page"
+            },
+            {
+              "uri": "http://target.local/dashboard",
+              "method": "GET",
+              "param": "",
+              "attack": "",
+              "evidence": "",
+              "otherinfo": "Missing header on user dashboard"
+            }
+          ],
+          "count": "2",
+          "solution": "Configure the X-Frame-Options HTTP response header to 'DENY' or 'SAMEORIGIN'.",
+          "otherinfo": "",
+          "reference": "https://cheatsheetseries.owasp.org/cheatsheets/Clickjacking_Defense_Cheat_Sheet.html",
+          "cweid": "1021",
+          "wascid": "15",
+          "sourceid": "1"
+        },
+        {
+          "pluginid": "10038",
+          "alertRef": "10038",
+          "alert": "Content Security Policy (CSP) Header Not Set",
+          "name": "Content Security Policy (CSP) Header Not Set",
+          "riskcode": "1",
+          "confidence": "2",
+          "riskdesc": "Low (Medium)",
+          "desc": "Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks.",
+          "instances": [
+            {
+              "uri": "http://target.local/",
+              "method": "GET",
+              "param": "",
+              "attack": "",
+              "evidence": "",
+              "otherinfo": ""
+            }
+          ],
+          "count": "1",
+          "solution": "Ensure that your web server, application server, load balancer, etc. is configured to set the Content-Security-Policy header.",
+          "otherinfo": "",
+          "reference": "https://content-security-policy.com/",
+          "cweid": "693",
+          "wascid": "15",
+          "sourceid": "1"
+        },
+        {
+          "pluginid": "10054",
+          "alertRef": "10054",
+          "alert": "Cookie without SameSite Attribute",
+          "name": "Cookie without SameSite Attribute",
+          "riskcode": "0",
+          "confidence": "2",
+          "riskdesc": "Informational (Medium)",
+          "desc": "A cookie has been set without the SameSite attribute, which means that the cookie can be sent as a result of a 'cross-site' request.",
+          "instances": [
+            {
+              "uri": "http://target.local/auth/session",
+              "method": "POST",
+              "param": "session_id",
+              "attack": "",
+              "evidence": "Set-Cookie: session_id=abc123",
+              "otherinfo": ""
+            }
+          ],
+          "count": "1",
+          "solution": "Ensure that the SameSite attribute is set to 'lax' or 'strict' for all sensitive cookies.",
+          "otherinfo": "",
+          "reference": "https://owasp.org/www-community/SameSite",
+          "cweid": "1275",
+          "wascid": "13",
+          "sourceid": "1"
+        }
+      ]
+    }
+  ]
+}
