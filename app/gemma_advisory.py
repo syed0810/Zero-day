@@ -1,0 +1,510 @@
+#!/usr/bin/env python3
+"""
+Project Zero-Day - Stage 2: Ollama & Gemma Advisory Service Integration
+Script: app/gemma_advisory.py
+Objective: Query local Ollama service (http://localhost:11434) running Gemma
+           to enrich normalized findings with structured AI vulnerability
+           explanations, remediation advice, and risk summaries.
+"""
+
+import json
+import os
+import re
+import sys
+import time
+import urllib.error
+import urllib.parse
+import urllib.request
+from pathlib import Path
+from typing import Any, Dict, List, Optional, Tuple
+
+
+DEFAULT_OLLAMA_HOST = os.environ.get("OLLAMA_HOST", "http://127.0.0.1:11434")
+DEFAULT_MODEL = os.environ.get("OLLAMA_MODEL", "gemma:2b")
+DEFAULT_TIMEOUT_SEC = float(os.environ.get("OLLAMA_TIMEOUT", "90.0"))
+
+
+class GemmaAdvisoryClient:
+    """
+    Client interface for local Ollama Gemma instance.
+    Implements FR-01, FR-02, FR-03, FR-04 and hard constraints.
+    """
+
+    def __init__(
+        self,
+        base_url: str = DEFAULT_OLLAMA_HOST,
+        model: str = DEFAULT_MODEL,
+        timeout: float = DEFAULT_TIMEOUT_SEC,
+    ):
+        self.base_url = base_url.rstrip("/")
+        self.model = model
+        self.timeout = timeout
+        self._auto_detect_model()
+
+    def _auto_detect_model(self) -> None:
+        """
+        Detects installed Gemma variants in Ollama (e.g. gemma4:latest, gemma:7b, gemma:2b).
+        """
+        try:
+            available = self.list_available_models()
+            if self.model in available:
+                return
+            for m in available:
+                if "gemma" in m.lower():
+                    self.model = m
+                    return
+            if available:
+                self.model = available[0]
+        except Exception:
+            pass
+
+    def check_health(self) -> Tuple[bool, Optional[str]]:
+        """
+        FR-01 & Testing Requirement: Verify connection to local Ollama service.
+        Returns (is_healthy, status_message).
+        """
+        self._auto_detect_model()
+        url = f"{self.base_url}/api/tags"
+        try:
+            req = urllib.request.Request(url, method="GET")
+            with urllib.request.urlopen(req, timeout=3.0) as resp:
+                if resp.status == 200:
+                    data = json.loads(resp.read().decode("utf-8"))
+                    models = [m.get("name", "") for m in data.get("models", [])]
+                    return True, f"Ollama online at {self.base_url}. Models: {models or 'none listed'}"
+                return False, f"Ollama returned HTTP status {resp.status}"
+        except urllib.error.URLError as err:
+            return False, f"Ollama unreachable at {self.base_url}: {err.reason}"
+        except Exception as err:
+            return False, f"Health check failed: {err}"
+
+    def list_available_models(self) -> List[str]:
+        """
+        Retrieve list of downloaded models in local Ollama instance.
+        """
+        url = f"{self.base_url}/api/tags"
+        try:
+            req = urllib.request.Request(url, method="GET")
+            with urllib.request.urlopen(req, timeout=3.0) as resp:
+                data = json.loads(resp.read().decode("utf-8"))
+                return [m.get("name", "") for m in data.get("models", []) if m.get("name")]
+        except Exception:
+            return []
+
+    def _build_prompt(
+        self,
+        title: str,
+        cwe_id: Optional[str],
+        url: str,
+        description: str,
+        method: str = "GET",
+        rag_scenarios: Optional[List[Dict[str, Any]]] = None,
+    ) -> str:
+        """
+        Construct structured prompt for Gemma to enforce concise schema output,
+        incorporating RAG scenario references as advisory background context.
+        """
+        rag_context_section = ""
+        if rag_scenarios:
+            rag_context_section = "\nReference Context (Advisory Only - Not Target Proof):\n"
+            for s in rag_scenarios:
+                clean_title = s.get('title', '')[:45].encode('ascii', errors='replace').decode('ascii')
+                clean_summary = s.get('summary', '')[:65].encode('ascii', errors='replace').decode('ascii')
+                rag_context_section += f"- [{s.get('id')}] {clean_title}: {clean_summary}\n"
+
+        return (
+            f"Vulnerability: {title} ({cwe_id or 'Unspecified'}). "
+            f"Target URL: {url}. Method: {method}. "
+            f"Description: {description}."
+            f"{rag_context_section}\n\n"
+            "Output a valid JSON object with keys: "
+            '"gemma_explanation", "remediation_advice", "risk_summary". '
+            "Keep each explanation concise (1-2 sentences)."
+        )
+
+    def _extract_json(self, raw_text: str) -> Dict[str, Any]:
+        """
+        Hard Constraint: Handle JSON parsing errors gracefully when LLM output
+        contains extra markdown formatting, thinking tags, or preambles.
+        """
+        # Strip thinking tags if generated by thinking models
+        clean_text = re.sub(r"<thought>.*?</thought>", "", raw_text, flags=re.DOTALL).strip()
+
+        # Attempt direct JSON parse
+        try:
+            return json.loads(clean_text)
+        except json.JSONDecodeError:
+            pass
+
+        # Match markdown fenced code blocks: ```json { ... } ``` or ``` { ... } ```
+        fence_match = re.search(r"```(?:json)?\s*(\{.*?\})\s*```", clean_text, re.DOTALL)
+        if fence_match:
+            try:
+                return json.loads(fence_match.group(1))
+            except json.JSONDecodeError:
+                pass
+
+        # Search for first outer curly brace pair: { ... }
+        brace_match = re.search(r"(\{.*\})", clean_text, re.DOTALL)
+        if brace_match:
+            try:
+                return json.loads(brace_match.group(1))
+            except json.JSONDecodeError:
+                pass
+
+        # Defensive recovery for partially truncated JSON
+        for suffix in ['"}', '"\n}', "}", '", "risk_summary": "High risk"}', '"}']:
+            try:
+                return json.loads(clean_text + suffix)
+            except json.JSONDecodeError:
+                pass
+
+        raise ValueError(f"Unable to parse structured JSON from model output: {raw_text[:120]}...")
+
+    def query_ollama(self, prompt: str) -> Tuple[Dict[str, Any], Dict[str, Any]]:
+        """
+        Execute inference call against Ollama /api/generate endpoint.
+        Returns: (parsed_json_response, telemetry_metadata)
+        """
+        self._auto_detect_model()
+        url = f"{self.base_url}/api/generate"
+        payload = {
+            "model": self.model,
+            "system": "You are a defensive security engineer. Never output thoughts, reasoning, or markdown. Output only a valid JSON object.",
+            "prompt": prompt,
+            "format": "json",
+            "stream": False,
+            "options": {
+                "temperature": 0.1,
+                "num_predict": 350,
+            },
+        }
+
+        req_data = json.dumps(payload).encode("utf-8")
+        req = urllib.request.Request(
+            url,
+            data=req_data,
+            headers={"Content-Type": "application/json"},
+            method="POST",
+        )
+
+        start_time = time.perf_counter()
+        with urllib.request.urlopen(req, timeout=self.timeout) as resp:
+            latency_ms = (time.perf_counter() - start_time) * 1000.0
+            raw_body = resp.read().decode("utf-8")
+            response_json = json.loads(raw_body)
+
+        model_output_str = response_json.get("response", "")
+        structured_data = self._extract_json(model_output_str)
+
+        telemetry = {
+            "latency_ms": round(latency_ms, 2),
+            "total_duration_ns": response_json.get("total_duration"),
+            "prompt_eval_count": response_json.get("prompt_eval_count", 0),
+            "eval_count": response_json.get("eval_count", 0),
+            "model_used": response_json.get("model", self.model),
+        }
+
+        return structured_data, telemetry
+
+    def fallback_advisory(self, finding: Dict[str, Any], error_reason: str) -> Dict[str, Any]:
+        """
+        FR-03: Rule-based fallback handling when Ollama service is stopped,
+        unresponsive, or model is missing. Ensures pipeline never crashes.
+        """
+        title = finding.get("title", "Security Finding")
+        cwe_id = finding.get("cwe_id") or "Unclassified"
+        risk = finding.get("risk_rating", "Informational")
+        url = finding.get("affected_asset", {}).get("url", "")
+        existing_rec = finding.get("ai_advisory", {}).get("recommendation", "")
+        existing_ref = finding.get("ai_advisory", {}).get("reference", "")
+
+        cwe_str = str(cwe_id).upper()
+        if "CWE-89" in cwe_str or "sql" in title.lower():
+            explanation = (
+                f"SQL injection flaw detected on asset {url}. User-supplied input is incorporated into SQL queries "
+                "without proper parameterized abstraction, risking full database compromise."
+            )
+            remediation = (
+                "1. Enforce parameterized queries (prepared statements) for all database operations.\n"
+                "2. Apply strict type casting and input validation for query parameters.\n"
+                "3. Configure database service accounts with the principle of least privilege."
+            )
+            risk_summary = "Critical impact on data confidentiality, integrity, and backend system availability."
+        elif "CWE-79" in cwe_str or "xss" in title.lower():
+            explanation = (
+                f"Cross-Site Scripting (XSS) identified on asset {url}. Untrusted parameter values are reflected "
+                "into HTML responses without contextual sanitization, enabling client-side script execution."
+            )
+            remediation = (
+                "1. Apply context-aware output encoding (HTML, JavaScript, Attribute context) before rendering.\n"
+                "2. Implement a strict Content Security Policy (CSP) header with nonces or hashes.\n"
+                "3. Set HttpOnly and SameSite flags on sensitive authentication cookies."
+            )
+            risk_summary = "High risk of session hijacking, credential theft, and unauthorized client action execution."
+        elif "CWE-1021" in cwe_str or "frame" in title.lower() or "clickjacking" in title.lower():
+            explanation = (
+                f"Clickjacking vulnerability on asset {url}. The HTTP response omits frame embedding restrictions, "
+                "permitting third-party sites to frame the interface in an invisible overlay."
+            )
+            remediation = (
+                "1. Configure HTTP response header 'X-Frame-Options: SAMEORIGIN' or 'DENY'.\n"
+                "2. Define the 'frame-ancestors' directive in Content Security Policy (e.g. Content-Security-Policy: frame-ancestors 'self')."
+            )
+            risk_summary = "Medium risk enabling UI redressing attacks and tricked user interactions."
+        elif "CWE-693" in cwe_str or "csp" in title.lower():
+            explanation = (
+                f"Missing Content Security Policy (CSP) header on {url}. Defense-in-depth protection against "
+                "content injection, unauthorized scripts, and data exfiltration is inactive."
+            )
+            remediation = (
+                "1. Configure a Content-Security-Policy header restricting script-src, object-src, and default-src.\n"
+                "2. Test policy in report-only mode (Content-Security-Policy-Report-Only) before full enforcement."
+            )
+            risk_summary = "Low/Medium defense-in-depth vulnerability reducing client-side security resilience."
+        else:
+            explanation = (
+                f"Advisory for {title} ({cwe_id}) on {url}. Untrusted inputs or misconfigured security controls "
+                "expose the application to potential security degradation."
+            )
+            remediation = existing_rec or "Review application configuration, apply defense-in-depth controls, and validate input."
+            risk_summary = f"{risk} risk level vulnerability. Address according to standard operational SLA."
+
+        return {
+            "is_ai_generated": False,
+            "is_fallback": True,
+            "fallback_reason": error_reason,
+            "model": "rule-based-fallback",
+            "gemma_explanation": explanation,
+            "remediation_advice": remediation,
+            "risk_summary": risk_summary,
+            "recommendation": existing_rec,
+            "reference": existing_ref,
+            "confidence": "advisory_only",
+            "disclaimer": "Untrusted automated advisory guidance; requires defensive engineering review.",
+        }
+
+    def generate_advisory(self, finding: Dict[str, Any]) -> Tuple[Dict[str, Any], Optional[Dict[str, Any]]]:
+        """
+        Attempts inference via local Ollama Gemma instance enhanced with
+        contextual scenario references retrieved from pz_scenarios.py.
+        Falls back seamlessly if Ollama is unreachable, times out, or errors.
+        """
+        title = finding.get("title", "Untitled Alert")
+        cwe_id = finding.get("cwe_id")
+        asset = finding.get("affected_asset", {})
+        url = asset.get("url", "")
+        method = asset.get("method", "GET")
+        description = finding.get("description", "")
+        existing_rec = finding.get("ai_advisory", {}).get("recommendation", "")
+        existing_ref = finding.get("ai_advisory", {}).get("reference", "")
+
+        # Retrieve contextual scenarios from SQLite FTS5 RAG index
+        rag_scenarios: List[Dict[str, Any]] = []
+        try:
+            root_dir = Path(__file__).resolve().parent.parent
+            if str(root_dir) not in sys.path:
+                sys.path.insert(0, str(root_dir))
+            from pz_scenarios import get_relevant_scenarios
+            rag_scenarios = get_relevant_scenarios(cwe_id=cwe_id, vulnerability_class=title, limit=2)
+        except Exception as e:
+            pass
+
+        prompt = self._build_prompt(
+            title=title,
+            cwe_id=cwe_id,
+            url=url,
+            description=description,
+            method=method,
+            rag_scenarios=rag_scenarios,
+        )
+
+        try:
+            structured_data, telemetry = self.query_ollama(prompt)
+            # FR-04: Mark all generated content with is_ai_generated: true
+            advisory = {
+                "is_ai_generated": True,
+                "is_fallback": False,
+                "model": telemetry.get("model_used", self.model),
+                "gemma_explanation": str(structured_data.get("gemma_explanation", "")).strip(),
+                "remediation_advice": str(structured_data.get("remediation_advice", "")).strip(),
+                "risk_summary": str(structured_data.get("risk_summary", "")).strip(),
+                "recommendation": existing_rec,
+                "reference": existing_ref,
+                "rag_context_injected": bool(rag_scenarios),
+                "rag_references": [
+                    {
+                        "id": s.get("id"),
+                        "title": s.get("title"),
+                        "cwe_id": s.get("cwe_id"),
+                        "summary": s.get("summary", "")[:120],
+                    }
+                    for s in rag_scenarios
+                ],
+                "confidence": "advisory_only",
+                "disclaimer": "Untrusted AI advisory guidance; requires defensive engineering review.",
+            }
+            return advisory, telemetry
+        except Exception as exc:
+            # FR-03: Graceful fallback
+            fallback = self.fallback_advisory(finding, error_reason=str(exc))
+            fallback["rag_context_injected"] = bool(rag_scenarios)
+            fallback["rag_references"] = [
+                {
+                    "id": s.get("id"),
+                    "title": s.get("title"),
+                    "cwe_id": s.get("cwe_id"),
+                }
+                for s in rag_scenarios
+            ]
+            return fallback, None
+
+    def enrich_finding(self, finding: Dict[str, Any]) -> Tuple[Dict[str, Any], Optional[Dict[str, Any]]]:
+        """
+        Enriches finding's ai_advisory section.
+        HARD CONSTRAINT: Never allow Gemma model outputs to modify verification
+        status or bypass policy controls.
+        """
+        # Save verification state prior to advisory enrichment
+        prior_verification = json.loads(json.dumps(finding.get("verification", {})))
+
+        advisory, telemetry = self.generate_advisory(finding)
+        finding["ai_advisory"] = advisory
+
+        # Hard constraint enforcement: Restore and verify verification status
+        finding["verification"] = prior_verification
+        if finding["verification"].get("verified") is True:
+            # Policy enforcement: scanner alerts must never be auto-marked verified
+            finding["verification"]["verified"] = False
+            finding["verification"]["status"] = "NEEDS_VERIFICATION"
+
+        return finding, telemetry
+
+
+def enrich_findings_file(
+    input_path: Path,
+    output_path: Optional[Path] = None,
+    client: Optional[GemmaAdvisoryClient] = None,
+) -> List[Dict[str, Any]]:
+    """
+    Batch processes all findings in normalized_findings.json and populates ai_advisory.
+    """
+    if client is None:
+        client = GemmaAdvisoryClient()
+
+    if output_path is None:
+        output_path = input_path
+
+    if not input_path.is_file():
+        raise FileNotFoundError(f"Input findings file not found at: {input_path}")
+
+    with open(input_path, "r", encoding="utf-8") as f:
+        findings: List[Dict[str, Any]] = json.load(f)
+
+    print("============================================================")
+    print("Project Zero-Day: Gemma AI Advisory Service (Stage 2)")
+    print("============================================================")
+    print(f"Target Ollama host:          {client.base_url}")
+    print(f"Target model:                {client.model}")
+    print(f"Findings to process:         {len(findings)}")
+
+    is_online, health_msg = client.check_health()
+    print(f"Ollama health check:         {'ONLINE' if is_online else 'OFFLINE (Fallback Active)'}")
+    print(f"Health details:              {health_msg}")
+    print("------------------------------------------------------------")
+
+    latencies: List[float] = []
+    total_prompt_tokens = 0
+    total_eval_tokens = 0
+    sample_advisory: Optional[Dict[str, Any]] = None
+
+    advisory_cache: Dict[Tuple[str, str], Tuple[Dict[str, Any], Optional[Dict[str, Any]]]] = {}
+
+    for idx, finding in enumerate(findings):
+        f_id = finding.get("id", f"F-{idx}")
+        f_title = finding.get("title", "Alert")
+        f_cwe = str(finding.get("cwe_id", "") or "")
+        cache_key = (f_title, f_cwe)
+
+        if cache_key in advisory_cache:
+            cached_adv, cached_tel = advisory_cache[cache_key]
+            # Preserve instance specific recommendations/references
+            instance_adv = json.loads(json.dumps(cached_adv))
+            if finding.get("ai_advisory", {}).get("recommendation"):
+                instance_adv["recommendation"] = finding["ai_advisory"]["recommendation"]
+            if finding.get("ai_advisory", {}).get("reference"):
+                instance_adv["reference"] = finding["ai_advisory"]["reference"]
+            finding["ai_advisory"] = instance_adv
+            print(f"[{idx+1}/{len(findings)}] {f_id} - {f_title} -> AI Generated (Cached from {f_title}, 0.1ms)")
+            if sample_advisory is None or finding.get("risk_rating") in ["High", "Medium"]:
+                sample_advisory = instance_adv
+        else:
+            enriched, telemetry = client.enrich_finding(finding)
+            advisory_cache[cache_key] = (enriched["ai_advisory"], telemetry)
+
+            if telemetry:
+                lat = telemetry["latency_ms"]
+                latencies.append(lat)
+                total_prompt_tokens += telemetry.get("prompt_eval_count", 0)
+                total_eval_tokens += telemetry.get("eval_count", 0)
+                print(f"[{idx+1}/{len(findings)}] {f_id} - {f_title} -> AI Generated ({lat:.1f}ms)")
+            else:
+                reason = enriched["ai_advisory"].get("fallback_reason", "Service offline")
+                print(f"[{idx+1}/{len(findings)}] {f_id} - {f_title} -> Fallback Advisory ({reason[:45]}...)")
+
+            if sample_advisory is None or finding.get("risk_rating") in ["High", "Medium"]:
+                sample_advisory = enriched["ai_advisory"]
+
+    # Write enriched findings back to output path
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(findings, f, indent=2)
+
+    avg_latency = (sum(latencies) / len(latencies)) if latencies else 0.0
+
+    print("============================================================")
+    print("Gemma Advisory Summary Statistics")
+    print("============================================================")
+    print(f"Total findings processed:    {len(findings)}")
+    print(f"Online AI inferences:        {len(latencies)}")
+    print(f"Fallback advisories:         {len(findings) - len(latencies)}")
+    print(f"Average inference latency:   {avg_latency:.2f} ms")
+    if total_prompt_tokens or total_eval_tokens:
+        print(f"Total prompt tokens:         {total_prompt_tokens}")
+        print(f"Total generated tokens:      {total_eval_tokens}")
+    print(f"Output saved to:             {output_path}")
+    print("Status:                      SUCCESS")
+    print("============================================================")
+
+    if sample_advisory:
+        print("\n--- Sample Generated Advisory ---")
+        print(json.dumps(sample_advisory, indent=2))
+        print("----------------------------------\n")
+
+    return findings
+
+
+def main() -> None:
+    # Dynamically locate normalized_findings.json
+    root_dir = Path(__file__).resolve().parent.parent
+    cwd_candidate = Path.cwd() / "normalized_findings.json"
+    root_candidate = root_dir / "normalized_findings.json"
+
+    input_file = cwd_candidate if cwd_candidate.is_file() else root_candidate
+    if not input_file.is_file():
+        print(f"[ERROR] Could not locate normalized_findings.json in {Path.cwd()} or {root_dir}", file=sys.stderr)
+        sys.exit(1)
+
+    client = GemmaAdvisoryClient()
+    is_online, health_msg = client.check_health()
+    if not is_online:
+        print(f"[INFO] Ollama service offline ({health_msg}). Rule-based fallback advisory active.")
+
+    try:
+        enrich_findings_file(input_file, input_file, client)
+    except Exception as exc:
+        print(f"[ERROR] Failed during Gemma advisory generation: {exc}", file=sys.stderr)
+        sys.exit(1)
+
+
+if __name__ == "__main__":
+    main()
