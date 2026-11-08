@@ -1,0 +1,1902 @@
+[
+  {
+    "id": "ZAP-10038-1-19b862ba",
+    "source_type": "web",
+    "source_tool": "OWASP ZAP",
+    "title": "Content Security Policy (CSP) Header Not Set",
+    "cwe_id": "CWE-693",
+    "risk_rating": "Medium",
+    "priority": null,
+    "affected_asset": {
+      "url": "http://localhost:8000",
+      "method": "GET",
+      "parameter": ""
+    },
+    "description": "<p>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page \u2014 covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</p>",
+    "evidence": {
+      "observed_at": null,
+      "attack": "",
+      "evidence": "",
+      "other_info": "",
+      "request": null,
+      "response": null
+    },
+    "verification": {
+      "status": "NEEDS_VERIFICATION",
+      "verified": false,
+      "verified_at": null,
+      "verified_by": null,
+      "method": null,
+      "notes": "Scanner alert initialized; pending verification evaluation"
+    },
+    "ai_advisory": {
+      "recommendation": "<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Content-Security-Policy header.</p>",
+      "reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP</p><p>https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html</p><p>https://www.w3.org/TR/CSP/</p><p>https://w3c.github.io/webappsec-csp/</p><p>https://web.dev/articles/csp</p><p>https://caniuse.com/#feat=contentsecuritypolicy</p><p>https://content-security-policy.com/</p>",
+      "remediation_guidance": null,
+      "analysis": null
+    },
+    "provenance": {
+      "scanner": "OWASP ZAP",
+      "provenance_label": "LIVE SCAN: OWASP ZAP",
+      "source_file": "zap-findings-live.json",
+      "plugin_id": "10038",
+      "alert_ref": "10038-1",
+      "source_id": "7",
+      "site_name": "http://host.docker.internal:3000",
+      "site_host": "host.docker.internal",
+      "site_port": "3000",
+      "site_ssl": "false",
+      "raw_uri": "http://host.docker.internal:3000"
+    }
+  },
+  {
+    "id": "ZAP-10038-1-441180aa",
+    "source_type": "web",
+    "source_tool": "OWASP ZAP",
+    "title": "Content Security Policy (CSP) Header Not Set",
+    "cwe_id": "CWE-693",
+    "risk_rating": "Medium",
+    "priority": null,
+    "affected_asset": {
+      "url": "http://localhost:8000/ftp/coupons_2013.md.bak",
+      "method": "GET",
+      "parameter": ""
+    },
+    "description": "<p>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page \u2014 covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</p>",
+    "evidence": {
+      "observed_at": null,
+      "attack": "",
+      "evidence": "",
+      "other_info": "",
+      "request": null,
+      "response": null
+    },
+    "verification": {
+      "status": "NEEDS_VERIFICATION",
+      "verified": false,
+      "verified_at": null,
+      "verified_by": null,
+      "method": null,
+      "notes": "Scanner alert initialized; pending verification evaluation"
+    },
+    "ai_advisory": {
+      "recommendation": "<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Content-Security-Policy header.</p>",
+      "reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP</p><p>https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html</p><p>https://www.w3.org/TR/CSP/</p><p>https://w3c.github.io/webappsec-csp/</p><p>https://web.dev/articles/csp</p><p>https://caniuse.com/#feat=contentsecuritypolicy</p><p>https://content-security-policy.com/</p>",
+      "remediation_guidance": null,
+      "analysis": null
+    },
+    "provenance": {
+      "scanner": "OWASP ZAP",
+      "provenance_label": "LIVE SCAN: OWASP ZAP",
+      "source_file": "zap-findings-live.json",
+      "plugin_id": "10038",
+      "alert_ref": "10038-1",
+      "source_id": "7",
+      "site_name": "http://host.docker.internal:3000",
+      "site_host": "host.docker.internal",
+      "site_port": "3000",
+      "site_ssl": "false",
+      "raw_uri": "http://host.docker.internal:3000/ftp/coupons_2013.md.bak"
+    }
+  },
+  {
+    "id": "ZAP-10038-1-6a7275ed",
+    "source_type": "web",
+    "source_tool": "OWASP ZAP",
+    "title": "Content Security Policy (CSP) Header Not Set",
+    "cwe_id": "CWE-693",
+    "risk_rating": "Medium",
+    "priority": null,
+    "affected_asset": {
+      "url": "http://localhost:8000/ftp/eastere.gg",
+      "method": "GET",
+      "parameter": ""
+    },
+    "description": "<p>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page \u2014 covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</p>",
+    "evidence": {
+      "observed_at": null,
+      "attack": "",
+      "evidence": "",
+      "other_info": "",
+      "request": null,
+      "response": null
+    },
+    "verification": {
+      "status": "NEEDS_VERIFICATION",
+      "verified": false,
+      "verified_at": null,
+      "verified_by": null,
+      "method": null,
+      "notes": "Scanner alert initialized; pending verification evaluation"
+    },
+    "ai_advisory": {
+      "recommendation": "<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Content-Security-Policy header.</p>",
+      "reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP</p><p>https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html</p><p>https://www.w3.org/TR/CSP/</p><p>https://w3c.github.io/webappsec-csp/</p><p>https://web.dev/articles/csp</p><p>https://caniuse.com/#feat=contentsecuritypolicy</p><p>https://content-security-policy.com/</p>",
+      "remediation_guidance": null,
+      "analysis": null
+    },
+    "provenance": {
+      "scanner": "OWASP ZAP",
+      "provenance_label": "LIVE SCAN: OWASP ZAP",
+      "source_file": "zap-findings-live.json",
+      "plugin_id": "10038",
+      "alert_ref": "10038-1",
+      "source_id": "7",
+      "site_name": "http://host.docker.internal:3000",
+      "site_host": "host.docker.internal",
+      "site_port": "3000",
+      "site_ssl": "false",
+      "raw_uri": "http://host.docker.internal:3000/ftp/eastere.gg"
+    }
+  },
+  {
+    "id": "ZAP-10038-1-a7cf9884",
+    "source_type": "web",
+    "source_tool": "OWASP ZAP",
+    "title": "Content Security Policy (CSP) Header Not Set",
+    "cwe_id": "CWE-693",
+    "risk_rating": "Medium",
+    "priority": null,
+    "affected_asset": {
+      "url": "http://localhost:8000/ftp/package-lock.json.bak",
+      "method": "GET",
+      "parameter": ""
+    },
+    "description": "<p>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page \u2014 covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</p>",
+    "evidence": {
+      "observed_at": null,
+      "attack": "",
+      "evidence": "",
+      "other_info": "",
+      "request": null,
+      "response": null
+    },
+    "verification": {
+      "status": "NEEDS_VERIFICATION",
+      "verified": false,
+      "verified_at": null,
+      "verified_by": null,
+      "method": null,
+      "notes": "Scanner alert initialized; pending verification evaluation"
+    },
+    "ai_advisory": {
+      "recommendation": "<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Content-Security-Policy header.</p>",
+      "reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP</p><p>https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html</p><p>https://www.w3.org/TR/CSP/</p><p>https://w3c.github.io/webappsec-csp/</p><p>https://web.dev/articles/csp</p><p>https://caniuse.com/#feat=contentsecuritypolicy</p><p>https://content-security-policy.com/</p>",
+      "remediation_guidance": null,
+      "analysis": null
+    },
+    "provenance": {
+      "scanner": "OWASP ZAP",
+      "provenance_label": "LIVE SCAN: OWASP ZAP",
+      "source_file": "zap-findings-live.json",
+      "plugin_id": "10038",
+      "alert_ref": "10038-1",
+      "source_id": "7",
+      "site_name": "http://host.docker.internal:3000",
+      "site_host": "host.docker.internal",
+      "site_port": "3000",
+      "site_ssl": "false",
+      "raw_uri": "http://host.docker.internal:3000/ftp/package-lock.json.bak"
+    }
+  },
+  {
+    "id": "ZAP-10038-1-e9800d86",
+    "source_type": "web",
+    "source_tool": "OWASP ZAP",
+    "title": "Content Security Policy (CSP) Header Not Set",
+    "cwe_id": "CWE-693",
+    "risk_rating": "Medium",
+    "priority": null,
+    "affected_asset": {
+      "url": "http://localhost:8000/sitemap.xml",
+      "method": "GET",
+      "parameter": ""
+    },
+    "description": "<p>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page \u2014 covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</p>",
+    "evidence": {
+      "observed_at": null,
+      "attack": "",
+      "evidence": "",
+      "other_info": "",
+      "request": null,
+      "response": null
+    },
+    "verification": {
+      "status": "NEEDS_VERIFICATION",
+      "verified": false,
+      "verified_at": null,
+      "verified_by": null,
+      "method": null,
+      "notes": "Scanner alert initialized; pending verification evaluation"
+    },
+    "ai_advisory": {
+      "recommendation": "<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Content-Security-Policy header.</p>",
+      "reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP</p><p>https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html</p><p>https://www.w3.org/TR/CSP/</p><p>https://w3c.github.io/webappsec-csp/</p><p>https://web.dev/articles/csp</p><p>https://caniuse.com/#feat=contentsecuritypolicy</p><p>https://content-security-policy.com/</p>",
+      "remediation_guidance": null,
+      "analysis": null
+    },
+    "provenance": {
+      "scanner": "OWASP ZAP",
+      "provenance_label": "LIVE SCAN: OWASP ZAP",
+      "source_file": "zap-findings-live.json",
+      "plugin_id": "10038",
+      "alert_ref": "10038-1",
+      "source_id": "7",
+      "site_name": "http://host.docker.internal:3000",
+      "site_host": "host.docker.internal",
+      "site_port": "3000",
+      "site_ssl": "false",
+      "raw_uri": "http://host.docker.internal:3000/sitemap.xml"
+    }
+  },
+  {
+    "id": "ZAP-10098-760c5eb3",
+    "source_type": "web",
+    "source_tool": "OWASP ZAP",
+    "title": "Cross-Domain Misconfiguration",
+    "cwe_id": "CWE-264",
+    "risk_rating": "Medium",
+    "priority": null,
+    "affected_asset": {
+      "url": "http://localhost:8000",
+      "method": "GET",
+      "parameter": ""
+    },
+    "description": "<p>Web browser data loading may be possible, due to a Cross Origin Resource Sharing (CORS) misconfiguration on the web server.</p>",
+    "evidence": {
+      "observed_at": null,
+      "attack": "",
+      "evidence": "Access-Control-Allow-Origin: *",
+      "other_info": "The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing.",
+      "request": null,
+      "response": null
+    },
+    "verification": {
+      "status": "NEEDS_VERIFICATION",
+      "verified": false,
+      "verified_at": null,
+      "verified_by": null,
+      "method": null,
+      "notes": "Scanner alert initialized; pending verification evaluation"
+    },
+    "ai_advisory": {
+      "recommendation": "<p>Ensure that sensitive data is not available in an unauthenticated manner (using IP address white-listing, for instance).</p><p>Configure the \"Access-Control-Allow-Origin\" HTTP header to a more restrictive set of domains, or remove all CORS headers entirely, to allow the web browser to enforce the Same Origin Policy (SOP) in a more restrictive manner.</p>",
+      "reference": "<p>https://vulncat.fortify.com/en/detail?category=HTML5&subcategory=Overly%20Permissive%20CORS%20Policy</p>",
+      "remediation_guidance": null,
+      "analysis": null
+    },
+    "provenance": {
+      "scanner": "OWASP ZAP",
+      "provenance_label": "LIVE SCAN: OWASP ZAP",
+      "source_file": "zap-findings-live.json",
+      "plugin_id": "10098",
+      "alert_ref": "10098",
+      "source_id": "7",
+      "site_name": "http://host.docker.internal:3000",
+      "site_host": "host.docker.internal",
+      "site_port": "3000",
+      "site_ssl": "false",
+      "raw_uri": "http://host.docker.internal:3000"
+    }
+  },
+  {
+    "id": "ZAP-10098-1ad15e00",
+    "source_type": "web",
+    "source_tool": "OWASP ZAP",
+    "title": "Cross-Domain Misconfiguration",
+    "cwe_id": "CWE-264",
+    "risk_rating": "Medium",
+    "priority": null,
+    "affected_asset": {
+      "url": "http://localhost:8000/assets/public/favicon_js.ico",
+      "method": "GET",
+      "parameter": ""
+    },
+    "description": "<p>Web browser data loading may be possible, due to a Cross Origin Resource Sharing (CORS) misconfiguration on the web server.</p>",
+    "evidence": {
+      "observed_at": null,
+      "attack": "",
+      "evidence": "Access-Control-Allow-Origin: *",
+      "other_info": "The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing.",
+      "request": null,
+      "response": null
+    },
+    "verification": {
+      "status": "NEEDS_VERIFICATION",
+      "verified": false,
+      "verified_at": null,
+      "verified_by": null,
+      "method": null,
+      "notes": "Scanner alert initialized; pending verification evaluation"
+    },
+    "ai_advisory": {
+      "recommendation": "<p>Ensure that sensitive data is not available in an unauthenticated manner (using IP address white-listing, for instance).</p><p>Configure the \"Access-Control-Allow-Origin\" HTTP header to a more restrictive set of domains, or remove all CORS headers entirely, to allow the web browser to enforce the Same Origin Policy (SOP) in a more restrictive manner.</p>",
+      "reference": "<p>https://vulncat.fortify.com/en/detail?category=HTML5&subcategory=Overly%20Permissive%20CORS%20Policy</p>",
+      "remediation_guidance": null,
+      "analysis": null
+    },
+    "provenance": {
+      "scanner": "OWASP ZAP",
+      "provenance_label": "LIVE SCAN: OWASP ZAP",
+      "source_file": "zap-findings-live.json",
+      "plugin_id": "10098",
+      "alert_ref": "10098",
+      "source_id": "7",
+      "site_name": "http://host.docker.internal:3000",
+      "site_host": "host.docker.internal",
+      "site_port": "3000",
+      "site_ssl": "false",
+      "raw_uri": "http://host.docker.internal:3000/assets/public/favicon_js.ico"
+    }
+  },
+  {
+    "id": "ZAP-10098-f5a56928",
+    "source_type": "web",
+    "source_tool": "OWASP ZAP",
+    "title": "Cross-Domain Misconfiguration",
+    "cwe_id": "CWE-264",
+    "risk_rating": "Medium",
+    "priority": null,
+    "affected_asset": {
+      "url": "http://localhost:8000/robots.txt",
+      "method": "GET",
+      "parameter": ""
+    },
+    "description": "<p>Web browser data loading may be possible, due to a Cross Origin Resource Sharing (CORS) misconfiguration on the web server.</p>",
+    "evidence": {
+      "observed_at": null,
+      "attack": "",
+      "evidence": "Access-Control-Allow-Origin: *",
+      "other_info": "The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing.",
+      "request": null,
+      "response": null
+    },
+    "verification": {
+      "status": "NEEDS_VERIFICATION",
+      "verified": false,
+      "verified_at": null,
+      "verified_by": null,
+      "method": null,
+      "notes": "Scanner alert initialized; pending verification evaluation"
+    },
+    "ai_advisory": {
+      "recommendation": "<p>Ensure that sensitive data is not available in an unauthenticated manner (using IP address white-listing, for instance).</p><p>Configure the \"Access-Control-Allow-Origin\" HTTP header to a more restrictive set of domains, or remove all CORS headers entirely, to allow the web browser to enforce the Same Origin Policy (SOP) in a more restrictive manner.</p>",
+      "reference": "<p>https://vulncat.fortify.com/en/detail?category=HTML5&subcategory=Overly%20Permissive%20CORS%20Policy</p>",
+      "remediation_guidance": null,
+      "analysis": null
+    },
+    "provenance": {
+      "scanner": "OWASP ZAP",
+      "provenance_label": "LIVE SCAN: OWASP ZAP",
+      "source_file": "zap-findings-live.json",
+      "plugin_id": "10098",
+      "alert_ref": "10098",
+      "source_id": "7",
+      "site_name": "http://host.docker.internal:3000",
+      "site_host": "host.docker.internal",
+      "site_port": "3000",
+      "site_ssl": "false",
+      "raw_uri": "http://host.docker.internal:3000/robots.txt"
+    }
+  },
+  {
+    "id": "ZAP-10098-99a4c01a",
+    "source_type": "web",
+    "source_tool": "OWASP ZAP",
+    "title": "Cross-Domain Misconfiguration",
+    "cwe_id": "CWE-264",
+    "risk_rating": "Medium",
+    "priority": null,
+    "affected_asset": {
+      "url": "http://localhost:8000/sitemap.xml",
+      "method": "GET",
+      "parameter": ""
+    },
+    "description": "<p>Web browser data loading may be possible, due to a Cross Origin Resource Sharing (CORS) misconfiguration on the web server.</p>",
+    "evidence": {
+      "observed_at": null,
+      "attack": "",
+      "evidence": "Access-Control-Allow-Origin: *",
+      "other_info": "The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing.",
+      "request": null,
+      "response": null
+    },
+    "verification": {
+      "status": "NEEDS_VERIFICATION",
+      "verified": false,
+      "verified_at": null,
+      "verified_by": null,
+      "method": null,
+      "notes": "Scanner alert initialized; pending verification evaluation"
+    },
+    "ai_advisory": {
+      "recommendation": "<p>Ensure that sensitive data is not available in an unauthenticated manner (using IP address white-listing, for instance).</p><p>Configure the \"Access-Control-Allow-Origin\" HTTP header to a more restrictive set of domains, or remove all CORS headers entirely, to allow the web browser to enforce the Same Origin Policy (SOP) in a more restrictive manner.</p>",
+      "reference": "<p>https://vulncat.fortify.com/en/detail?category=HTML5&subcategory=Overly%20Permissive%20CORS%20Policy</p>",
+      "remediation_guidance": null,
+      "analysis": null
+    },
+    "provenance": {
+      "scanner": "OWASP ZAP",
+      "provenance_label": "LIVE SCAN: OWASP ZAP",
+      "source_file": "zap-findings-live.json",
+      "plugin_id": "10098",
+      "alert_ref": "10098",
+      "source_id": "7",
+      "site_name": "http://host.docker.internal:3000",
+      "site_host": "host.docker.internal",
+      "site_port": "3000",
+      "site_ssl": "false",
+      "raw_uri": "http://host.docker.internal:3000/sitemap.xml"
+    }
+  },
+  {
+    "id": "ZAP-10098-4e805cdf",
+    "source_type": "web",
+    "source_tool": "OWASP ZAP",
+    "title": "Cross-Domain Misconfiguration",
+    "cwe_id": "CWE-264",
+    "risk_rating": "Medium",
+    "priority": null,
+    "affected_asset": {
+      "url": "http://localhost:8000/styles.css",
+      "method": "GET",
+      "parameter": ""
+    },
+    "description": "<p>Web browser data loading may be possible, due to a Cross Origin Resource Sharing (CORS) misconfiguration on the web server.</p>",
+    "evidence": {
+      "observed_at": null,
+      "attack": "",
+      "evidence": "Access-Control-Allow-Origin: *",
+      "other_info": "The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing.",
+      "request": null,
+      "response": null
+    },
+    "verification": {
+      "status": "NEEDS_VERIFICATION",
+      "verified": false,
+      "verified_at": null,
+      "verified_by": null,
+      "method": null,
+      "notes": "Scanner alert initialized; pending verification evaluation"
+    },
+    "ai_advisory": {
+      "recommendation": "<p>Ensure that sensitive data is not available in an unauthenticated manner (using IP address white-listing, for instance).</p><p>Configure the \"Access-Control-Allow-Origin\" HTTP header to a more restrictive set of domains, or remove all CORS headers entirely, to allow the web browser to enforce the Same Origin Policy (SOP) in a more restrictive manner.</p>",
+      "reference": "<p>https://vulncat.fortify.com/en/detail?category=HTML5&subcategory=Overly%20Permissive%20CORS%20Policy</p>",
+      "remediation_guidance": null,
+      "analysis": null
+    },
+    "provenance": {
+      "scanner": "OWASP ZAP",
+      "provenance_label": "LIVE SCAN: OWASP ZAP",
+      "source_file": "zap-findings-live.json",
+      "plugin_id": "10098",
+      "alert_ref": "10098",
+      "source_id": "7",
+      "site_name": "http://host.docker.internal:3000",
+      "site_host": "host.docker.internal",
+      "site_port": "3000",
+      "site_ssl": "false",
+      "raw_uri": "http://host.docker.internal:3000/styles.css"
+    }
+  },
+  {
+    "id": "ZAP-90004-2-ecc15495",
+    "source_type": "web",
+    "source_tool": "OWASP ZAP",
+    "title": "Cross-Origin-Embedder-Policy Header Missing or Invalid",
+    "cwe_id": "CWE-693",
+    "risk_rating": "Low",
+    "priority": null,
+    "affected_asset": {
+      "url": "http://localhost:8000",
+      "method": "GET",
+      "parameter": "Cross-Origin-Embedder-Policy"
+    },
+    "description": "<p>Cross-Origin-Embedder-Policy header is a response header that prevents a document from loading any cross-origin resources that don't explicitly grant the document permission (using CORP or CORS).</p>",
+    "evidence": {
+      "observed_at": null,
+      "attack": "",
+      "evidence": "",
+      "other_info": "",
+      "request": null,
+      "response": null
+    },
+    "verification": {
+      "status": "NEEDS_VERIFICATION",
+      "verified": false,
+      "verified_at": null,
+      "verified_by": null,
+      "method": null,
+      "notes": "Scanner alert initialized; pending verification evaluation"
+    },
+    "ai_advisory": {
+      "recommendation": "<p>Ensure that the application/web server sets the Cross-Origin-Embedder-Policy header appropriately, and that it sets the Cross-Origin-Embedder-Policy header to 'require-corp' for documents.</p><p>If possible, ensure that the end user uses a standards-compliant and modern web browser that supports the Cross-Origin-Embedder-Policy header (https://caniuse.com/mdn-http_headers_cross-origin-embedder-policy).</p>",
+      "reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Cross-Origin-Embedder-Policy</p>",
+      "remediation_guidance": null,
+      "analysis": null
+    },
+    "provenance": {
+      "scanner": "OWASP ZAP",
+      "provenance_label": "LIVE SCAN: OWASP ZAP",
+      "source_file": "zap-findings-live.json",
+      "plugin_id": "90004",
+      "alert_ref": "90004-2",
+      "source_id": "7",
+      "site_name": "http://host.docker.internal:3000",
+      "site_host": "host.docker.internal",
+      "site_port": "3000",
+      "site_ssl": "false",
+      "raw_uri": "http://host.docker.internal:3000"
+    }
+  },
+  {
+    "id": "ZAP-90004-2-b82a6649",
+    "source_type": "web",
+    "source_tool": "OWASP ZAP",
+    "title": "Cross-Origin-Embedder-Policy Header Missing or Invalid",
+    "cwe_id": "CWE-693",
+    "risk_rating": "Low",
+    "priority": null,
+    "affected_asset": {
+      "url": "http://localhost:8000/",
+      "method": "GET",
+      "parameter": "Cross-Origin-Embedder-Policy"
+    },
+    "description": "<p>Cross-Origin-Embedder-Policy header is a response header that prevents a document from loading any cross-origin resources that don't explicitly grant the document permission (using CORP or CORS).</p>",
+    "evidence": {
+      "observed_at": null,
+      "attack": "",
+      "evidence": "",
+      "other_info": "",
+      "request": null,
+      "response": null
+    },
+    "verification": {
+      "status": "NEEDS_VERIFICATION",
+      "verified": false,
+      "verified_at": null,
+      "verified_by": null,
+      "method": null,
+      "notes": "Scanner alert initialized; pending verification evaluation"
+    },
+    "ai_advisory": {
+      "recommendation": "<p>Ensure that the application/web server sets the Cross-Origin-Embedder-Policy header appropriately, and that it sets the Cross-Origin-Embedder-Policy header to 'require-corp' for documents.</p><p>If possible, ensure that the end user uses a standards-compliant and modern web browser that supports the Cross-Origin-Embedder-Policy header (https://caniuse.com/mdn-http_headers_cross-origin-embedder-policy).</p>",
+      "reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Cross-Origin-Embedder-Policy</p>",
+      "remediation_guidance": null,
+      "analysis": null
+    },
+    "provenance": {
+      "scanner": "OWASP ZAP",
+      "provenance_label": "LIVE SCAN: OWASP ZAP",
+      "source_file": "zap-findings-live.json",
+      "plugin_id": "90004",
+      "alert_ref": "90004-2",
+      "source_id": "7",
+      "site_name": "http://host.docker.internal:3000",
+      "site_host": "host.docker.internal",
+      "site_port": "3000",
+      "site_ssl": "false",
+      "raw_uri": "http://host.docker.internal:3000/"
+    }
+  },
+  {
+    "id": "ZAP-90004-2-5f849b93",
+    "source_type": "web",
+    "source_tool": "OWASP ZAP",
+    "title": "Cross-Origin-Embedder-Policy Header Missing or Invalid",
+    "cwe_id": "CWE-693",
+    "risk_rating": "Low",
+    "priority": null,
+    "affected_asset": {
+      "url": "http://localhost:8000/ftp",
+      "method": "GET",
+      "parameter": "Cross-Origin-Embedder-Policy"
+    },
+    "description": "<p>Cross-Origin-Embedder-Policy header is a response header that prevents a document from loading any cross-origin resources that don't explicitly grant the document permission (using CORP or CORS).</p>",
+    "evidence": {
+      "observed_at": null,
+      "attack": "",
+      "evidence": "",
+      "other_info": "",
+      "request": null,
+      "response": null
+    },
+    "verification": {
+      "status": "NEEDS_VERIFICATION",
+      "verified": false,
+      "verified_at": null,
+      "verified_by": null,
+      "method": null,
+      "notes": "Scanner alert initialized; pending verification evaluation"
+    },
+    "ai_advisory": {
+      "recommendation": "<p>Ensure that the application/web server sets the Cross-Origin-Embedder-Policy header appropriately, and that it sets the Cross-Origin-Embedder-Policy header to 'require-corp' for documents.</p><p>If possible, ensure that the end user uses a standards-compliant and modern web browser that supports the Cross-Origin-Embedder-Policy header (https://caniuse.com/mdn-http_headers_cross-origin-embedder-policy).</p>",
+      "reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Cross-Origin-Embedder-Policy</p>",
+      "remediation_guidance": null,
+      "analysis": null
+    },
+    "provenance": {
+      "scanner": "OWASP ZAP",
+      "provenance_label": "LIVE SCAN: OWASP ZAP",
+      "source_file": "zap-findings-live.json",
+      "plugin_id": "90004",
+      "alert_ref": "90004-2",
+      "source_id": "7",
+      "site_name": "http://host.docker.internal:3000",
+      "site_host": "host.docker.internal",
+      "site_port": "3000",
+      "site_ssl": "false",
+      "raw_uri": "http://host.docker.internal:3000/ftp"
+    }
+  },
+  {
+    "id": "ZAP-90004-2-76404b32",
+    "source_type": "web",
+    "source_tool": "OWASP ZAP",
+    "title": "Cross-Origin-Embedder-Policy Header Missing or Invalid",
+    "cwe_id": "CWE-693",
+    "risk_rating": "Low",
+    "priority": null,
+    "affected_asset": {
+      "url": "http://localhost:8000/juice-shop/build/routes/fileServer.js:68:18",
+      "method": "GET",
+      "parameter": "Cross-Origin-Embedder-Policy"
+    },
+    "description": "<p>Cross-Origin-Embedder-Policy header is a response header that prevents a document from loading any cross-origin resources that don't explicitly grant the document permission (using CORP or CORS).</p>",
+    "evidence": {
+      "observed_at": null,
+      "attack": "",
+      "evidence": "",
+      "other_info": "",
+      "request": null,
+      "response": null
+    },
+    "verification": {
+      "status": "NEEDS_VERIFICATION",
+      "verified": false,
+      "verified_at": null,
+      "verified_by": null,
+      "method": null,
+      "notes": "Scanner alert initialized; pending verification evaluation"
+    },
+    "ai_advisory": {
+      "recommendation": "<p>Ensure that the application/web server sets the Cross-Origin-Embedder-Policy header appropriately, and that it sets the Cross-Origin-Embedder-Policy header to 'require-corp' for documents.</p><p>If possible, ensure that the end user uses a standards-compliant and modern web browser that supports the Cross-Origin-Embedder-Policy header (https://caniuse.com/mdn-http_headers_cross-origin-embedder-policy).</p>",
+      "reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Cross-Origin-Embedder-Policy</p>",
+      "remediation_guidance": null,
+      "analysis": null
+    },
+    "provenance": {
+      "scanner": "OWASP ZAP",
+      "provenance_label": "LIVE SCAN: OWASP ZAP",
+      "source_file": "zap-findings-live.json",
+      "plugin_id": "90004",
+      "alert_ref": "90004-2",
+      "source_id": "7",
+      "site_name": "http://host.docker.internal:3000",
+      "site_host": "host.docker.internal",
+      "site_port": "3000",
+      "site_ssl": "false",
+      "raw_uri": "http://host.docker.internal:3000/juice-shop/build/routes/fileServer.js:68:18"
+    }
+  },
+  {
+    "id": "ZAP-90004-2-05084a70",
+    "source_type": "web",
+    "source_tool": "OWASP ZAP",
+    "title": "Cross-Origin-Embedder-Policy Header Missing or Invalid",
+    "cwe_id": "CWE-693",
+    "risk_rating": "Low",
+    "priority": null,
+    "affected_asset": {
+      "url": "http://localhost:8000/sitemap.xml",
+      "method": "GET",
+      "parameter": "Cross-Origin-Embedder-Policy"
+    },
+    "description": "<p>Cross-Origin-Embedder-Policy header is a response header that prevents a document from loading any cross-origin resources that don't explicitly grant the document permission (using CORP or CORS).</p>",
+    "evidence": {
+      "observed_at": null,
+      "attack": "",
+      "evidence": "",
+      "other_info": "",
+      "request": null,
+      "response": null
+    },
+    "verification": {
+      "status": "NEEDS_VERIFICATION",
+      "verified": false,
+      "verified_at": null,
+      "verified_by": null,
+      "method": null,
+      "notes": "Scanner alert initialized; pending verification evaluation"
+    },
+    "ai_advisory": {
+      "recommendation": "<p>Ensure that the application/web server sets the Cross-Origin-Embedder-Policy header appropriately, and that it sets the Cross-Origin-Embedder-Policy header to 'require-corp' for documents.</p><p>If possible, ensure that the end user uses a standards-compliant and modern web browser that supports the Cross-Origin-Embedder-Policy header (https://caniuse.com/mdn-http_headers_cross-origin-embedder-policy).</p>",
+      "reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Cross-Origin-Embedder-Policy</p>",
+      "remediation_guidance": null,
+      "analysis": null
+    },
+    "provenance": {
+      "scanner": "OWASP ZAP",
+      "provenance_label": "LIVE SCAN: OWASP ZAP",
+      "source_file": "zap-findings-live.json",
+      "plugin_id": "90004",
+      "alert_ref": "90004-2",
+      "source_id": "7",
+      "site_name": "http://host.docker.internal:3000",
+      "site_host": "host.docker.internal",
+      "site_port": "3000",
+      "site_ssl": "false",
+      "raw_uri": "http://host.docker.internal:3000/sitemap.xml"
+    }
+  },
+  {
+    "id": "ZAP-90004-3-934e8132",
+    "source_type": "web",
+    "source_tool": "OWASP ZAP",
+    "title": "Cross-Origin-Opener-Policy Header Missing or Invalid",
+    "cwe_id": "CWE-693",
+    "risk_rating": "Low",
+    "priority": null,
+    "affected_asset": {
+      "url": "http://localhost:8000",
+      "method": "GET",
+      "parameter": "Cross-Origin-Opener-Policy"
+    },
+    "description": "<p>Cross-Origin-Opener-Policy header is a response header that allows a site to control if others included documents share the same browsing context. Sharing the same browsing context with untrusted documents might lead to data leak.</p>",
+    "evidence": {
+      "observed_at": null,
+      "attack": "",
+      "evidence": "",
+      "other_info": "",
+      "request": null,
+      "response": null
+    },
+    "verification": {
+      "status": "NEEDS_VERIFICATION",
+      "verified": false,
+      "verified_at": null,
+      "verified_by": null,
+      "method": null,
+      "notes": "Scanner alert initialized; pending verification evaluation"
+    },
+    "ai_advisory": {
+      "recommendation": "<p>Ensure that the application/web server sets the Cross-Origin-Opener-Policy header appropriately, and that it sets the Cross-Origin-Opener-Policy header to 'same-origin' for documents.</p><p>'same-origin-allow-popups' is considered as less secured and should be avoided.</p><p>If possible, ensure that the end user uses a standards-compliant and modern web browser that supports the Cross-Origin-Opener-Policy header (https://caniuse.com/mdn-http_headers_cross-origin-opener-policy).</p>",
+      "reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Cross-Origin-Opener-Policy</p>",
+      "remediation_guidance": null,
+      "analysis": null
+    },
+    "provenance": {
+      "scanner": "OWASP ZAP",
+      "provenance_label": "LIVE SCAN: OWASP ZAP",
+      "source_file": "zap-findings-live.json",
+      "plugin_id": "90004",
+      "alert_ref": "90004-3",
+      "source_id": "7",
+      "site_name": "http://host.docker.internal:3000",
+      "site_host": "host.docker.internal",
+      "site_port": "3000",
+      "site_ssl": "false",
+      "raw_uri": "http://host.docker.internal:3000"
+    }
+  },
+  {
+    "id": "ZAP-90004-3-46d0abb7",
+    "source_type": "web",
+    "source_tool": "OWASP ZAP",
+    "title": "Cross-Origin-Opener-Policy Header Missing or Invalid",
+    "cwe_id": "CWE-693",
+    "risk_rating": "Low",
+    "priority": null,
+    "affected_asset": {
+      "url": "http://localhost:8000/",
+      "method": "GET",
+      "parameter": "Cross-Origin-Opener-Policy"
+    },
+    "description": "<p>Cross-Origin-Opener-Policy header is a response header that allows a site to control if others included documents share the same browsing context. Sharing the same browsing context with untrusted documents might lead to data leak.</p>",
+    "evidence": {
+      "observed_at": null,
+      "attack": "",
+      "evidence": "",
+      "other_info": "",
+      "request": null,
+      "response": null
+    },
+    "verification": {
+      "status": "NEEDS_VERIFICATION",
+      "verified": false,
+      "verified_at": null,
+      "verified_by": null,
+      "method": null,
+      "notes": "Scanner alert initialized; pending verification evaluation"
+    },
+    "ai_advisory": {
+      "recommendation": "<p>Ensure that the application/web server sets the Cross-Origin-Opener-Policy header appropriately, and that it sets the Cross-Origin-Opener-Policy header to 'same-origin' for documents.</p><p>'same-origin-allow-popups' is considered as less secured and should be avoided.</p><p>If possible, ensure that the end user uses a standards-compliant and modern web browser that supports the Cross-Origin-Opener-Policy header (https://caniuse.com/mdn-http_headers_cross-origin-opener-policy).</p>",
+      "reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Cross-Origin-Opener-Policy</p>",
+      "remediation_guidance": null,
+      "analysis": null
+    },
+    "provenance": {
+      "scanner": "OWASP ZAP",
+      "provenance_label": "LIVE SCAN: OWASP ZAP",
+      "source_file": "zap-findings-live.json",
+      "plugin_id": "90004",
+      "alert_ref": "90004-3",
+      "source_id": "7",
+      "site_name": "http://host.docker.internal:3000",
+      "site_host": "host.docker.internal",
+      "site_port": "3000",
+      "site_ssl": "false",
+      "raw_uri": "http://host.docker.internal:3000/"
+    }
+  },
+  {
+    "id": "ZAP-90004-3-20d194b1",
+    "source_type": "web",
+    "source_tool": "OWASP ZAP",
+    "title": "Cross-Origin-Opener-Policy Header Missing or Invalid",
+    "cwe_id": "CWE-693",
+    "risk_rating": "Low",
+    "priority": null,
+    "affected_asset": {
+      "url": "http://localhost:8000/ftp",
+      "method": "GET",
+      "parameter": "Cross-Origin-Opener-Policy"
+    },
+    "description": "<p>Cross-Origin-Opener-Policy header is a response header that allows a site to control if others included documents share the same browsing context. Sharing the same browsing context with untrusted documents might lead to data leak.</p>",
+    "evidence": {
+      "observed_at": null,
+      "attack": "",
+      "evidence": "",
+      "other_info": "",
+      "request": null,
+      "response": null
+    },
+    "verification": {
+      "status": "NEEDS_VERIFICATION",
+      "verified": false,
+      "verified_at": null,
+      "verified_by": null,
+      "method": null,
+      "notes": "Scanner alert initialized; pending verification evaluation"
+    },
+    "ai_advisory": {
+      "recommendation": "<p>Ensure that the application/web server sets the Cross-Origin-Opener-Policy header appropriately, and that it sets the Cross-Origin-Opener-Policy header to 'same-origin' for documents.</p><p>'same-origin-allow-popups' is considered as less secured and should be avoided.</p><p>If possible, ensure that the end user uses a standards-compliant and modern web browser that supports the Cross-Origin-Opener-Policy header (https://caniuse.com/mdn-http_headers_cross-origin-opener-policy).</p>",
+      "reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Cross-Origin-Opener-Policy</p>",
+      "remediation_guidance": null,
+      "analysis": null
+    },
+    "provenance": {
+      "scanner": "OWASP ZAP",
+      "provenance_label": "LIVE SCAN: OWASP ZAP",
+      "source_file": "zap-findings-live.json",
+      "plugin_id": "90004",
+      "alert_ref": "90004-3",
+      "source_id": "7",
+      "site_name": "http://host.docker.internal:3000",
+      "site_host": "host.docker.internal",
+      "site_port": "3000",
+      "site_ssl": "false",
+      "raw_uri": "http://host.docker.internal:3000/ftp"
+    }
+  },
+  {
+    "id": "ZAP-90004-3-c35b1d77",
+    "source_type": "web",
+    "source_tool": "OWASP ZAP",
+    "title": "Cross-Origin-Opener-Policy Header Missing or Invalid",
+    "cwe_id": "CWE-693",
+    "risk_rating": "Low",
+    "priority": null,
+    "affected_asset": {
+      "url": "http://localhost:8000/juice-shop/build/routes/fileServer.js:68:18",
+      "method": "GET",
+      "parameter": "Cross-Origin-Opener-Policy"
+    },
+    "description": "<p>Cross-Origin-Opener-Policy header is a response header that allows a site to control if others included documents share the same browsing context. Sharing the same browsing context with untrusted documents might lead to data leak.</p>",
+    "evidence": {
+      "observed_at": null,
+      "attack": "",
+      "evidence": "",
+      "other_info": "",
+      "request": null,
+      "response": null
+    },
+    "verification": {
+      "status": "NEEDS_VERIFICATION",
+      "verified": false,
+      "verified_at": null,
+      "verified_by": null,
+      "method": null,
+      "notes": "Scanner alert initialized; pending verification evaluation"
+    },
+    "ai_advisory": {
+      "recommendation": "<p>Ensure that the application/web server sets the Cross-Origin-Opener-Policy header appropriately, and that it sets the Cross-Origin-Opener-Policy header to 'same-origin' for documents.</p><p>'same-origin-allow-popups' is considered as less secured and should be avoided.</p><p>If possible, ensure that the end user uses a standards-compliant and modern web browser that supports the Cross-Origin-Opener-Policy header (https://caniuse.com/mdn-http_headers_cross-origin-opener-policy).</p>",
+      "reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Cross-Origin-Opener-Policy</p>",
+      "remediation_guidance": null,
+      "analysis": null
+    },
+    "provenance": {
+      "scanner": "OWASP ZAP",
+      "provenance_label": "LIVE SCAN: OWASP ZAP",
+      "source_file": "zap-findings-live.json",
+      "plugin_id": "90004",
+      "alert_ref": "90004-3",
+      "source_id": "7",
+      "site_name": "http://host.docker.internal:3000",
+      "site_host": "host.docker.internal",
+      "site_port": "3000",
+      "site_ssl": "false",
+      "raw_uri": "http://host.docker.internal:3000/juice-shop/build/routes/fileServer.js:68:18"
+    }
+  },
+  {
+    "id": "ZAP-90004-3-586534c6",
+    "source_type": "web",
+    "source_tool": "OWASP ZAP",
+    "title": "Cross-Origin-Opener-Policy Header Missing or Invalid",
+    "cwe_id": "CWE-693",
+    "risk_rating": "Low",
+    "priority": null,
+    "affected_asset": {
+      "url": "http://localhost:8000/sitemap.xml",
+      "method": "GET",
+      "parameter": "Cross-Origin-Opener-Policy"
+    },
+    "description": "<p>Cross-Origin-Opener-Policy header is a response header that allows a site to control if others included documents share the same browsing context. Sharing the same browsing context with untrusted documents might lead to data leak.</p>",
+    "evidence": {
+      "observed_at": null,
+      "attack": "",
+      "evidence": "",
+      "other_info": "",
+      "request": null,
+      "response": null
+    },
+    "verification": {
+      "status": "NEEDS_VERIFICATION",
+      "verified": false,
+      "verified_at": null,
+      "verified_by": null,
+      "method": null,
+      "notes": "Scanner alert initialized; pending verification evaluation"
+    },
+    "ai_advisory": {
+      "recommendation": "<p>Ensure that the application/web server sets the Cross-Origin-Opener-Policy header appropriately, and that it sets the Cross-Origin-Opener-Policy header to 'same-origin' for documents.</p><p>'same-origin-allow-popups' is considered as less secured and should be avoided.</p><p>If possible, ensure that the end user uses a standards-compliant and modern web browser that supports the Cross-Origin-Opener-Policy header (https://caniuse.com/mdn-http_headers_cross-origin-opener-policy).</p>",
+      "reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Cross-Origin-Opener-Policy</p>",
+      "remediation_guidance": null,
+      "analysis": null
+    },
+    "provenance": {
+      "scanner": "OWASP ZAP",
+      "provenance_label": "LIVE SCAN: OWASP ZAP",
+      "source_file": "zap-findings-live.json",
+      "plugin_id": "90004",
+      "alert_ref": "90004-3",
+      "source_id": "7",
+      "site_name": "http://host.docker.internal:3000",
+      "site_host": "host.docker.internal",
+      "site_port": "3000",
+      "site_ssl": "false",
+      "raw_uri": "http://host.docker.internal:3000/sitemap.xml"
+    }
+  },
+  {
+    "id": "ZAP-10110-79cf1706",
+    "source_type": "web",
+    "source_tool": "OWASP ZAP",
+    "title": "Dangerous JS Functions",
+    "cwe_id": "CWE-749",
+    "risk_rating": "Low",
+    "priority": null,
+    "affected_asset": {
+      "url": "http://localhost:8000/chunk-Cv2YgWUq.js",
+      "method": "GET",
+      "parameter": ""
+    },
+    "description": "<p>A dangerous JS function seems to be in use that would leave the site vulnerable.</p>",
+    "evidence": {
+      "observed_at": null,
+      "attack": "",
+      "evidence": "bypassSecurityTrustHtml(",
+      "other_info": "",
+      "request": null,
+      "response": null
+    },
+    "verification": {
+      "status": "NEEDS_VERIFICATION",
+      "verified": false,
+      "verified_at": null,
+      "verified_by": null,
+      "method": null,
+      "notes": "Scanner alert initialized; pending verification evaluation"
+    },
+    "ai_advisory": {
+      "recommendation": "<p>See the references for security advice on the use of these functions.</p>",
+      "reference": "<p>https://v17.angular.io/guide/security</p>",
+      "remediation_guidance": null,
+      "analysis": null
+    },
+    "provenance": {
+      "scanner": "OWASP ZAP",
+      "provenance_label": "LIVE SCAN: OWASP ZAP",
+      "source_file": "zap-findings-live.json",
+      "plugin_id": "10110",
+      "alert_ref": "10110",
+      "source_id": "28",
+      "site_name": "http://host.docker.internal:3000",
+      "site_host": "host.docker.internal",
+      "site_port": "3000",
+      "site_ssl": "false",
+      "raw_uri": "http://host.docker.internal:3000/chunk-Cv2YgWUq.js"
+    }
+  },
+  {
+    "id": "ZAP-10110-5c7e49ec",
+    "source_type": "web",
+    "source_tool": "OWASP ZAP",
+    "title": "Dangerous JS Functions",
+    "cwe_id": "CWE-749",
+    "risk_rating": "Low",
+    "priority": null,
+    "affected_asset": {
+      "url": "http://localhost:8000/main.js",
+      "method": "GET",
+      "parameter": ""
+    },
+    "description": "<p>A dangerous JS function seems to be in use that would leave the site vulnerable.</p>",
+    "evidence": {
+      "observed_at": null,
+      "attack": "",
+      "evidence": "bypassSecurityTrustHtml(",
+      "other_info": "",
+      "request": null,
+      "response": null
+    },
+    "verification": {
+      "status": "NEEDS_VERIFICATION",
+      "verified": false,
+      "verified_at": null,
+      "verified_by": null,
+      "method": null,
+      "notes": "Scanner alert initialized; pending verification evaluation"
+    },
+    "ai_advisory": {
+      "recommendation": "<p>See the references for security advice on the use of these functions.</p>",
+      "reference": "<p>https://v17.angular.io/guide/security</p>",
+      "remediation_guidance": null,
+      "analysis": null
+    },
+    "provenance": {
+      "scanner": "OWASP ZAP",
+      "provenance_label": "LIVE SCAN: OWASP ZAP",
+      "source_file": "zap-findings-live.json",
+      "plugin_id": "10110",
+      "alert_ref": "10110",
+      "source_id": "28",
+      "site_name": "http://host.docker.internal:3000",
+      "site_host": "host.docker.internal",
+      "site_port": "3000",
+      "site_ssl": "false",
+      "raw_uri": "http://host.docker.internal:3000/main.js"
+    }
+  },
+  {
+    "id": "ZAP-10063-2-bedfaf56",
+    "source_type": "web",
+    "source_tool": "OWASP ZAP",
+    "title": "Deprecated Feature Policy Header Set",
+    "cwe_id": "CWE-16",
+    "risk_rating": "Low",
+    "priority": null,
+    "affected_asset": {
+      "url": "http://localhost:8000",
+      "method": "GET",
+      "parameter": ""
+    },
+    "description": "<p>The header has now been renamed to Permissions-Policy.</p>",
+    "evidence": {
+      "observed_at": null,
+      "attack": "",
+      "evidence": "Feature-Policy",
+      "other_info": "",
+      "request": null,
+      "response": null
+    },
+    "verification": {
+      "status": "NEEDS_VERIFICATION",
+      "verified": false,
+      "verified_at": null,
+      "verified_by": null,
+      "method": null,
+      "notes": "Scanner alert initialized; pending verification evaluation"
+    },
+    "ai_advisory": {
+      "recommendation": "<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Permissions-Policy header instead of the Feature-Policy header.</p>",
+      "reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy</p><p>https://scotthelme.co.uk/goodbye-feature-policy-and-hello-permissions-policy/</p>",
+      "remediation_guidance": null,
+      "analysis": null
+    },
+    "provenance": {
+      "scanner": "OWASP ZAP",
+      "provenance_label": "LIVE SCAN: OWASP ZAP",
+      "source_file": "zap-findings-live.json",
+      "plugin_id": "10063",
+      "alert_ref": "10063-2",
+      "source_id": "7",
+      "site_name": "http://host.docker.internal:3000",
+      "site_host": "host.docker.internal",
+      "site_port": "3000",
+      "site_ssl": "false",
+      "raw_uri": "http://host.docker.internal:3000"
+    }
+  },
+  {
+    "id": "ZAP-10063-2-fec19b88",
+    "source_type": "web",
+    "source_tool": "OWASP ZAP",
+    "title": "Deprecated Feature Policy Header Set",
+    "cwe_id": "CWE-16",
+    "risk_rating": "Low",
+    "priority": null,
+    "affected_asset": {
+      "url": "http://localhost:8000/polyfills.js",
+      "method": "GET",
+      "parameter": ""
+    },
+    "description": "<p>The header has now been renamed to Permissions-Policy.</p>",
+    "evidence": {
+      "observed_at": null,
+      "attack": "",
+      "evidence": "Feature-Policy",
+      "other_info": "",
+      "request": null,
+      "response": null
+    },
+    "verification": {
+      "status": "NEEDS_VERIFICATION",
+      "verified": false,
+      "verified_at": null,
+      "verified_by": null,
+      "method": null,
+      "notes": "Scanner alert initialized; pending verification evaluation"
+    },
+    "ai_advisory": {
+      "recommendation": "<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Permissions-Policy header instead of the Feature-Policy header.</p>",
+      "reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy</p><p>https://scotthelme.co.uk/goodbye-feature-policy-and-hello-permissions-policy/</p>",
+      "remediation_guidance": null,
+      "analysis": null
+    },
+    "provenance": {
+      "scanner": "OWASP ZAP",
+      "provenance_label": "LIVE SCAN: OWASP ZAP",
+      "source_file": "zap-findings-live.json",
+      "plugin_id": "10063",
+      "alert_ref": "10063-2",
+      "source_id": "7",
+      "site_name": "http://host.docker.internal:3000",
+      "site_host": "host.docker.internal",
+      "site_port": "3000",
+      "site_ssl": "false",
+      "raw_uri": "http://host.docker.internal:3000/polyfills.js"
+    }
+  },
+  {
+    "id": "ZAP-10063-2-12e66e3c",
+    "source_type": "web",
+    "source_tool": "OWASP ZAP",
+    "title": "Deprecated Feature Policy Header Set",
+    "cwe_id": "CWE-16",
+    "risk_rating": "Low",
+    "priority": null,
+    "affected_asset": {
+      "url": "http://localhost:8000/rolldown-runtime-BoHGiXSq.js",
+      "method": "GET",
+      "parameter": ""
+    },
+    "description": "<p>The header has now been renamed to Permissions-Policy.</p>",
+    "evidence": {
+      "observed_at": null,
+      "attack": "",
+      "evidence": "Feature-Policy",
+      "other_info": "",
+      "request": null,
+      "response": null
+    },
+    "verification": {
+      "status": "NEEDS_VERIFICATION",
+      "verified": false,
+      "verified_at": null,
+      "verified_by": null,
+      "method": null,
+      "notes": "Scanner alert initialized; pending verification evaluation"
+    },
+    "ai_advisory": {
+      "recommendation": "<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Permissions-Policy header instead of the Feature-Policy header.</p>",
+      "reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy</p><p>https://scotthelme.co.uk/goodbye-feature-policy-and-hello-permissions-policy/</p>",
+      "remediation_guidance": null,
+      "analysis": null
+    },
+    "provenance": {
+      "scanner": "OWASP ZAP",
+      "provenance_label": "LIVE SCAN: OWASP ZAP",
+      "source_file": "zap-findings-live.json",
+      "plugin_id": "10063",
+      "alert_ref": "10063-2",
+      "source_id": "7",
+      "site_name": "http://host.docker.internal:3000",
+      "site_host": "host.docker.internal",
+      "site_port": "3000",
+      "site_ssl": "false",
+      "raw_uri": "http://host.docker.internal:3000/rolldown-runtime-BoHGiXSq.js"
+    }
+  },
+  {
+    "id": "ZAP-10063-2-207e7036",
+    "source_type": "web",
+    "source_tool": "OWASP ZAP",
+    "title": "Deprecated Feature Policy Header Set",
+    "cwe_id": "CWE-16",
+    "risk_rating": "Low",
+    "priority": null,
+    "affected_asset": {
+      "url": "http://localhost:8000/scripts.js",
+      "method": "GET",
+      "parameter": ""
+    },
+    "description": "<p>The header has now been renamed to Permissions-Policy.</p>",
+    "evidence": {
+      "observed_at": null,
+      "attack": "",
+      "evidence": "Feature-Policy",
+      "other_info": "",
+      "request": null,
+      "response": null
+    },
+    "verification": {
+      "status": "NEEDS_VERIFICATION",
+      "verified": false,
+      "verified_at": null,
+      "verified_by": null,
+      "method": null,
+      "notes": "Scanner alert initialized; pending verification evaluation"
+    },
+    "ai_advisory": {
+      "recommendation": "<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Permissions-Policy header instead of the Feature-Policy header.</p>",
+      "reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy</p><p>https://scotthelme.co.uk/goodbye-feature-policy-and-hello-permissions-policy/</p>",
+      "remediation_guidance": null,
+      "analysis": null
+    },
+    "provenance": {
+      "scanner": "OWASP ZAP",
+      "provenance_label": "LIVE SCAN: OWASP ZAP",
+      "source_file": "zap-findings-live.json",
+      "plugin_id": "10063",
+      "alert_ref": "10063-2",
+      "source_id": "7",
+      "site_name": "http://host.docker.internal:3000",
+      "site_host": "host.docker.internal",
+      "site_port": "3000",
+      "site_ssl": "false",
+      "raw_uri": "http://host.docker.internal:3000/scripts.js"
+    }
+  },
+  {
+    "id": "ZAP-10063-2-2c912514",
+    "source_type": "web",
+    "source_tool": "OWASP ZAP",
+    "title": "Deprecated Feature Policy Header Set",
+    "cwe_id": "CWE-16",
+    "risk_rating": "Low",
+    "priority": null,
+    "affected_asset": {
+      "url": "http://localhost:8000/sitemap.xml",
+      "method": "GET",
+      "parameter": ""
+    },
+    "description": "<p>The header has now been renamed to Permissions-Policy.</p>",
+    "evidence": {
+      "observed_at": null,
+      "attack": "",
+      "evidence": "Feature-Policy",
+      "other_info": "",
+      "request": null,
+      "response": null
+    },
+    "verification": {
+      "status": "NEEDS_VERIFICATION",
+      "verified": false,
+      "verified_at": null,
+      "verified_by": null,
+      "method": null,
+      "notes": "Scanner alert initialized; pending verification evaluation"
+    },
+    "ai_advisory": {
+      "recommendation": "<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Permissions-Policy header instead of the Feature-Policy header.</p>",
+      "reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy</p><p>https://scotthelme.co.uk/goodbye-feature-policy-and-hello-permissions-policy/</p>",
+      "remediation_guidance": null,
+      "analysis": null
+    },
+    "provenance": {
+      "scanner": "OWASP ZAP",
+      "provenance_label": "LIVE SCAN: OWASP ZAP",
+      "source_file": "zap-findings-live.json",
+      "plugin_id": "10063",
+      "alert_ref": "10063-2",
+      "source_id": "7",
+      "site_name": "http://host.docker.internal:3000",
+      "site_host": "host.docker.internal",
+      "site_port": "3000",
+      "site_ssl": "false",
+      "raw_uri": "http://host.docker.internal:3000/sitemap.xml"
+    }
+  },
+  {
+    "id": "ZAP-10109-6060ef5f",
+    "source_type": "web",
+    "source_tool": "OWASP ZAP",
+    "title": "Modern Web Application",
+    "cwe_id": "CWE--1",
+    "risk_rating": "Informational",
+    "priority": null,
+    "affected_asset": {
+      "url": "http://localhost:8000",
+      "method": "GET",
+      "parameter": ""
+    },
+    "description": "<p>The application appears to be a modern web application. If you need to explore it automatically then the Client Spider may well be more effective than the standard one.</p>",
+    "evidence": {
+      "observed_at": null,
+      "attack": "",
+      "evidence": "<script>\n    window.addEventListener(\"load\", function(){\n      window.cookieconsent.initialise({\n        \"palette\": {\n          \"popup\": { \"background\": \"var(--theme-primary)\", \"text\": \"var(--theme-text)\" },\n          \"button\": { \"background\": \"var(--theme-accent)\", \"text\": \"var(--theme-text)\" }\n        },\n        \"theme\": \"classic\",\n        \"position\": \"bottom-right\",\n        \"content\": { \"message\": \"This website uses fruit cookies to ensure you get the juiciest tracking experience.\", \"dismiss\": \"Me want it!\", \"link\": \"But me wait!\", \"href\": \"https://www.youtube.com/watch?v=9PnbKL3wuH4\" }\n      })});\n  </script>",
+      "other_info": "No links have been found while there are scripts, which is an indication that this is a modern web application.",
+      "request": null,
+      "response": null
+    },
+    "verification": {
+      "status": "NEEDS_VERIFICATION",
+      "verified": false,
+      "verified_at": null,
+      "verified_by": null,
+      "method": null,
+      "notes": "Scanner alert initialized; pending verification evaluation"
+    },
+    "ai_advisory": {
+      "recommendation": "<p>This is an informational alert and so no changes are required.</p>",
+      "reference": "",
+      "remediation_guidance": null,
+      "analysis": null
+    },
+    "provenance": {
+      "scanner": "OWASP ZAP",
+      "provenance_label": "LIVE SCAN: OWASP ZAP",
+      "source_file": "zap-findings-live.json",
+      "plugin_id": "10109",
+      "alert_ref": "10109",
+      "source_id": "1",
+      "site_name": "http://host.docker.internal:3000",
+      "site_host": "host.docker.internal",
+      "site_port": "3000",
+      "site_ssl": "false",
+      "raw_uri": "http://host.docker.internal:3000"
+    }
+  },
+  {
+    "id": "ZAP-10109-b187ab5a",
+    "source_type": "web",
+    "source_tool": "OWASP ZAP",
+    "title": "Modern Web Application",
+    "cwe_id": "CWE--1",
+    "risk_rating": "Informational",
+    "priority": null,
+    "affected_asset": {
+      "url": "http://localhost:8000/",
+      "method": "GET",
+      "parameter": ""
+    },
+    "description": "<p>The application appears to be a modern web application. If you need to explore it automatically then the Client Spider may well be more effective than the standard one.</p>",
+    "evidence": {
+      "observed_at": null,
+      "attack": "",
+      "evidence": "<script>\n    window.addEventListener(\"load\", function(){\n      window.cookieconsent.initialise({\n        \"palette\": {\n          \"popup\": { \"background\": \"var(--theme-primary)\", \"text\": \"var(--theme-text)\" },\n          \"button\": { \"background\": \"var(--theme-accent)\", \"text\": \"var(--theme-text)\" }\n        },\n        \"theme\": \"classic\",\n        \"position\": \"bottom-right\",\n        \"content\": { \"message\": \"This website uses fruit cookies to ensure you get the juiciest tracking experience.\", \"dismiss\": \"Me want it!\", \"link\": \"But me wait!\", \"href\": \"https://www.youtube.com/watch?v=9PnbKL3wuH4\" }\n      })});\n  </script>",
+      "other_info": "No links have been found while there are scripts, which is an indication that this is a modern web application.",
+      "request": null,
+      "response": null
+    },
+    "verification": {
+      "status": "NEEDS_VERIFICATION",
+      "verified": false,
+      "verified_at": null,
+      "verified_by": null,
+      "method": null,
+      "notes": "Scanner alert initialized; pending verification evaluation"
+    },
+    "ai_advisory": {
+      "recommendation": "<p>This is an informational alert and so no changes are required.</p>",
+      "reference": "",
+      "remediation_guidance": null,
+      "analysis": null
+    },
+    "provenance": {
+      "scanner": "OWASP ZAP",
+      "provenance_label": "LIVE SCAN: OWASP ZAP",
+      "source_file": "zap-findings-live.json",
+      "plugin_id": "10109",
+      "alert_ref": "10109",
+      "source_id": "1",
+      "site_name": "http://host.docker.internal:3000",
+      "site_host": "host.docker.internal",
+      "site_port": "3000",
+      "site_ssl": "false",
+      "raw_uri": "http://host.docker.internal:3000/"
+    }
+  },
+  {
+    "id": "ZAP-10109-c9197778",
+    "source_type": "web",
+    "source_tool": "OWASP ZAP",
+    "title": "Modern Web Application",
+    "cwe_id": "CWE--1",
+    "risk_rating": "Informational",
+    "priority": null,
+    "affected_asset": {
+      "url": "http://localhost:8000/juice-shop/build/routes/fileServer.js:68:18",
+      "method": "GET",
+      "parameter": ""
+    },
+    "description": "<p>The application appears to be a modern web application. If you need to explore it automatically then the Client Spider may well be more effective than the standard one.</p>",
+    "evidence": {
+      "observed_at": null,
+      "attack": "",
+      "evidence": "<script>\n    window.addEventListener(\"load\", function(){\n      window.cookieconsent.initialise({\n        \"palette\": {\n          \"popup\": { \"background\": \"var(--theme-primary)\", \"text\": \"var(--theme-text)\" },\n          \"button\": { \"background\": \"var(--theme-accent)\", \"text\": \"var(--theme-text)\" }\n        },\n        \"theme\": \"classic\",\n        \"position\": \"bottom-right\",\n        \"content\": { \"message\": \"This website uses fruit cookies to ensure you get the juiciest tracking experience.\", \"dismiss\": \"Me want it!\", \"link\": \"But me wait!\", \"href\": \"https://www.youtube.com/watch?v=9PnbKL3wuH4\" }\n      })});\n  </script>",
+      "other_info": "No links have been found while there are scripts, which is an indication that this is a modern web application.",
+      "request": null,
+      "response": null
+    },
+    "verification": {
+      "status": "NEEDS_VERIFICATION",
+      "verified": false,
+      "verified_at": null,
+      "verified_by": null,
+      "method": null,
+      "notes": "Scanner alert initialized; pending verification evaluation"
+    },
+    "ai_advisory": {
+      "recommendation": "<p>This is an informational alert and so no changes are required.</p>",
+      "reference": "",
+      "remediation_guidance": null,
+      "analysis": null
+    },
+    "provenance": {
+      "scanner": "OWASP ZAP",
+      "provenance_label": "LIVE SCAN: OWASP ZAP",
+      "source_file": "zap-findings-live.json",
+      "plugin_id": "10109",
+      "alert_ref": "10109",
+      "source_id": "1",
+      "site_name": "http://host.docker.internal:3000",
+      "site_host": "host.docker.internal",
+      "site_port": "3000",
+      "site_ssl": "false",
+      "raw_uri": "http://host.docker.internal:3000/juice-shop/build/routes/fileServer.js:68:18"
+    }
+  },
+  {
+    "id": "ZAP-10109-00aa72c9",
+    "source_type": "web",
+    "source_tool": "OWASP ZAP",
+    "title": "Modern Web Application",
+    "cwe_id": "CWE--1",
+    "risk_rating": "Informational",
+    "priority": null,
+    "affected_asset": {
+      "url": "http://localhost:8000/juice-shop/node_modules/express/lib/router/layer.js:95:5",
+      "method": "GET",
+      "parameter": ""
+    },
+    "description": "<p>The application appears to be a modern web application. If you need to explore it automatically then the Client Spider may well be more effective than the standard one.</p>",
+    "evidence": {
+      "observed_at": null,
+      "attack": "",
+      "evidence": "<script>\n    window.addEventListener(\"load\", function(){\n      window.cookieconsent.initialise({\n        \"palette\": {\n          \"popup\": { \"background\": \"var(--theme-primary)\", \"text\": \"var(--theme-text)\" },\n          \"button\": { \"background\": \"var(--theme-accent)\", \"text\": \"var(--theme-text)\" }\n        },\n        \"theme\": \"classic\",\n        \"position\": \"bottom-right\",\n        \"content\": { \"message\": \"This website uses fruit cookies to ensure you get the juiciest tracking experience.\", \"dismiss\": \"Me want it!\", \"link\": \"But me wait!\", \"href\": \"https://www.youtube.com/watch?v=9PnbKL3wuH4\" }\n      })});\n  </script>",
+      "other_info": "No links have been found while there are scripts, which is an indication that this is a modern web application.",
+      "request": null,
+      "response": null
+    },
+    "verification": {
+      "status": "NEEDS_VERIFICATION",
+      "verified": false,
+      "verified_at": null,
+      "verified_by": null,
+      "method": null,
+      "notes": "Scanner alert initialized; pending verification evaluation"
+    },
+    "ai_advisory": {
+      "recommendation": "<p>This is an informational alert and so no changes are required.</p>",
+      "reference": "",
+      "remediation_guidance": null,
+      "analysis": null
+    },
+    "provenance": {
+      "scanner": "OWASP ZAP",
+      "provenance_label": "LIVE SCAN: OWASP ZAP",
+      "source_file": "zap-findings-live.json",
+      "plugin_id": "10109",
+      "alert_ref": "10109",
+      "source_id": "1",
+      "site_name": "http://host.docker.internal:3000",
+      "site_host": "host.docker.internal",
+      "site_port": "3000",
+      "site_ssl": "false",
+      "raw_uri": "http://host.docker.internal:3000/juice-shop/node_modules/express/lib/router/layer.js:95:5"
+    }
+  },
+  {
+    "id": "ZAP-10109-31d7f3eb",
+    "source_type": "web",
+    "source_tool": "OWASP ZAP",
+    "title": "Modern Web Application",
+    "cwe_id": "CWE--1",
+    "risk_rating": "Informational",
+    "priority": null,
+    "affected_asset": {
+      "url": "http://localhost:8000/sitemap.xml",
+      "method": "GET",
+      "parameter": ""
+    },
+    "description": "<p>The application appears to be a modern web application. If you need to explore it automatically then the Client Spider may well be more effective than the standard one.</p>",
+    "evidence": {
+      "observed_at": null,
+      "attack": "",
+      "evidence": "<script>\n    window.addEventListener(\"load\", function(){\n      window.cookieconsent.initialise({\n        \"palette\": {\n          \"popup\": { \"background\": \"var(--theme-primary)\", \"text\": \"var(--theme-text)\" },\n          \"button\": { \"background\": \"var(--theme-accent)\", \"text\": \"var(--theme-text)\" }\n        },\n        \"theme\": \"classic\",\n        \"position\": \"bottom-right\",\n        \"content\": { \"message\": \"This website uses fruit cookies to ensure you get the juiciest tracking experience.\", \"dismiss\": \"Me want it!\", \"link\": \"But me wait!\", \"href\": \"https://www.youtube.com/watch?v=9PnbKL3wuH4\" }\n      })});\n  </script>",
+      "other_info": "No links have been found while there are scripts, which is an indication that this is a modern web application.",
+      "request": null,
+      "response": null
+    },
+    "verification": {
+      "status": "NEEDS_VERIFICATION",
+      "verified": false,
+      "verified_at": null,
+      "verified_by": null,
+      "method": null,
+      "notes": "Scanner alert initialized; pending verification evaluation"
+    },
+    "ai_advisory": {
+      "recommendation": "<p>This is an informational alert and so no changes are required.</p>",
+      "reference": "",
+      "remediation_guidance": null,
+      "analysis": null
+    },
+    "provenance": {
+      "scanner": "OWASP ZAP",
+      "provenance_label": "LIVE SCAN: OWASP ZAP",
+      "source_file": "zap-findings-live.json",
+      "plugin_id": "10109",
+      "alert_ref": "10109",
+      "source_id": "1",
+      "site_name": "http://host.docker.internal:3000",
+      "site_host": "host.docker.internal",
+      "site_port": "3000",
+      "site_ssl": "false",
+      "raw_uri": "http://host.docker.internal:3000/sitemap.xml"
+    }
+  },
+  {
+    "id": "ZAP-10049-3-69f546df",
+    "source_type": "web",
+    "source_tool": "OWASP ZAP",
+    "title": "Storable and Cacheable Content",
+    "cwe_id": "CWE-524",
+    "risk_rating": "Informational",
+    "priority": null,
+    "affected_asset": {
+      "url": "http://localhost:8000/robots.txt",
+      "method": "GET",
+      "parameter": ""
+    },
+    "description": "<p>The response contents are storable by caching components such as proxy servers, and may be retrieved directly from the cache, rather than from the origin server by the caching servers, in response to similar requests from other users. If the response data is sensitive, personal or user-specific, this may result in sensitive information being leaked. In some cases, this may even result in a user gaining complete control of the session of another user, depending on the configuration of the caching components in use in their environment. This is primarily an issue where \"shared\" caching servers such as \"proxy\" caches are configured on the local network. This configuration is typically found in corporate or educational environments, for instance.</p>",
+    "evidence": {
+      "observed_at": null,
+      "attack": "",
+      "evidence": "",
+      "other_info": "In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234.",
+      "request": null,
+      "response": null
+    },
+    "verification": {
+      "status": "NEEDS_VERIFICATION",
+      "verified": false,
+      "verified_at": null,
+      "verified_by": null,
+      "method": null,
+      "notes": "Scanner alert initialized; pending verification evaluation"
+    },
+    "ai_advisory": {
+      "recommendation": "<p>Validate that the response does not contain sensitive, personal or user-specific information. If it does, consider the use of the following HTTP response headers, to limit, or prevent the content being stored and retrieved from the cache by another user:</p><p>Cache-Control: no-cache, no-store, must-revalidate, private</p><p>Pragma: no-cache</p><p>Expires: 0</p><p>This configuration directs both HTTP 1.0 and HTTP 1.1 compliant caching servers to not store the response, and to not retrieve the response (without validation) from the cache, in response to a similar request.</p>",
+      "reference": "<p>https://datatracker.ietf.org/doc/html/rfc7234</p><p>https://datatracker.ietf.org/doc/html/rfc7231</p><p>https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html</p>",
+      "remediation_guidance": null,
+      "analysis": null
+    },
+    "provenance": {
+      "scanner": "OWASP ZAP",
+      "provenance_label": "LIVE SCAN: OWASP ZAP",
+      "source_file": "zap-findings-live.json",
+      "plugin_id": "10049",
+      "alert_ref": "10049-3",
+      "source_id": "6",
+      "site_name": "http://host.docker.internal:3000",
+      "site_host": "host.docker.internal",
+      "site_port": "3000",
+      "site_ssl": "false",
+      "raw_uri": "http://host.docker.internal:3000/robots.txt"
+    }
+  },
+  {
+    "id": "ZAP-10049-2-733b363c",
+    "source_type": "web",
+    "source_tool": "OWASP ZAP",
+    "title": "Storable but Non-Cacheable Content",
+    "cwe_id": "CWE-524",
+    "risk_rating": "Informational",
+    "priority": null,
+    "affected_asset": {
+      "url": "http://localhost:8000",
+      "method": "GET",
+      "parameter": ""
+    },
+    "description": "<p>The response contents are storable by caching components such as proxy servers, but will not be retrieved directly from the cache, without validating the request upstream, in response to similar requests from other users.</p>",
+    "evidence": {
+      "observed_at": null,
+      "attack": "",
+      "evidence": "max-age=0",
+      "other_info": "",
+      "request": null,
+      "response": null
+    },
+    "verification": {
+      "status": "NEEDS_VERIFICATION",
+      "verified": false,
+      "verified_at": null,
+      "verified_by": null,
+      "method": null,
+      "notes": "Scanner alert initialized; pending verification evaluation"
+    },
+    "ai_advisory": {
+      "recommendation": "",
+      "reference": "<p>https://datatracker.ietf.org/doc/html/rfc7234</p><p>https://datatracker.ietf.org/doc/html/rfc7231</p><p>https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html</p>",
+      "remediation_guidance": null,
+      "analysis": null
+    },
+    "provenance": {
+      "scanner": "OWASP ZAP",
+      "provenance_label": "LIVE SCAN: OWASP ZAP",
+      "source_file": "zap-findings-live.json",
+      "plugin_id": "10049",
+      "alert_ref": "10049-2",
+      "source_id": "7",
+      "site_name": "http://host.docker.internal:3000",
+      "site_host": "host.docker.internal",
+      "site_port": "3000",
+      "site_ssl": "false",
+      "raw_uri": "http://host.docker.internal:3000"
+    }
+  },
+  {
+    "id": "ZAP-10049-2-50129d2c",
+    "source_type": "web",
+    "source_tool": "OWASP ZAP",
+    "title": "Storable but Non-Cacheable Content",
+    "cwe_id": "CWE-524",
+    "risk_rating": "Informational",
+    "priority": null,
+    "affected_asset": {
+      "url": "http://localhost:8000/polyfills.js",
+      "method": "GET",
+      "parameter": ""
+    },
+    "description": "<p>The response contents are storable by caching components such as proxy servers, but will not be retrieved directly from the cache, without validating the request upstream, in response to similar requests from other users.</p>",
+    "evidence": {
+      "observed_at": null,
+      "attack": "",
+      "evidence": "max-age=0",
+      "other_info": "",
+      "request": null,
+      "response": null
+    },
+    "verification": {
+      "status": "NEEDS_VERIFICATION",
+      "verified": false,
+      "verified_at": null,
+      "verified_by": null,
+      "method": null,
+      "notes": "Scanner alert initialized; pending verification evaluation"
+    },
+    "ai_advisory": {
+      "recommendation": "",
+      "reference": "<p>https://datatracker.ietf.org/doc/html/rfc7234</p><p>https://datatracker.ietf.org/doc/html/rfc7231</p><p>https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html</p>",
+      "remediation_guidance": null,
+      "analysis": null
+    },
+    "provenance": {
+      "scanner": "OWASP ZAP",
+      "provenance_label": "LIVE SCAN: OWASP ZAP",
+      "source_file": "zap-findings-live.json",
+      "plugin_id": "10049",
+      "alert_ref": "10049-2",
+      "source_id": "7",
+      "site_name": "http://host.docker.internal:3000",
+      "site_host": "host.docker.internal",
+      "site_port": "3000",
+      "site_ssl": "false",
+      "raw_uri": "http://host.docker.internal:3000/polyfills.js"
+    }
+  },
+  {
+    "id": "ZAP-10049-2-68281a19",
+    "source_type": "web",
+    "source_tool": "OWASP ZAP",
+    "title": "Storable but Non-Cacheable Content",
+    "cwe_id": "CWE-524",
+    "risk_rating": "Informational",
+    "priority": null,
+    "affected_asset": {
+      "url": "http://localhost:8000/scripts.js",
+      "method": "GET",
+      "parameter": ""
+    },
+    "description": "<p>The response contents are storable by caching components such as proxy servers, but will not be retrieved directly from the cache, without validating the request upstream, in response to similar requests from other users.</p>",
+    "evidence": {
+      "observed_at": null,
+      "attack": "",
+      "evidence": "max-age=0",
+      "other_info": "",
+      "request": null,
+      "response": null
+    },
+    "verification": {
+      "status": "NEEDS_VERIFICATION",
+      "verified": false,
+      "verified_at": null,
+      "verified_by": null,
+      "method": null,
+      "notes": "Scanner alert initialized; pending verification evaluation"
+    },
+    "ai_advisory": {
+      "recommendation": "",
+      "reference": "<p>https://datatracker.ietf.org/doc/html/rfc7234</p><p>https://datatracker.ietf.org/doc/html/rfc7231</p><p>https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html</p>",
+      "remediation_guidance": null,
+      "analysis": null
+    },
+    "provenance": {
+      "scanner": "OWASP ZAP",
+      "provenance_label": "LIVE SCAN: OWASP ZAP",
+      "source_file": "zap-findings-live.json",
+      "plugin_id": "10049",
+      "alert_ref": "10049-2",
+      "source_id": "7",
+      "site_name": "http://host.docker.internal:3000",
+      "site_host": "host.docker.internal",
+      "site_port": "3000",
+      "site_ssl": "false",
+      "raw_uri": "http://host.docker.internal:3000/scripts.js"
+    }
+  },
+  {
+    "id": "ZAP-10049-2-20b7c305",
+    "source_type": "web",
+    "source_tool": "OWASP ZAP",
+    "title": "Storable but Non-Cacheable Content",
+    "cwe_id": "CWE-524",
+    "risk_rating": "Informational",
+    "priority": null,
+    "affected_asset": {
+      "url": "http://localhost:8000/sitemap.xml",
+      "method": "GET",
+      "parameter": ""
+    },
+    "description": "<p>The response contents are storable by caching components such as proxy servers, but will not be retrieved directly from the cache, without validating the request upstream, in response to similar requests from other users.</p>",
+    "evidence": {
+      "observed_at": null,
+      "attack": "",
+      "evidence": "max-age=0",
+      "other_info": "",
+      "request": null,
+      "response": null
+    },
+    "verification": {
+      "status": "NEEDS_VERIFICATION",
+      "verified": false,
+      "verified_at": null,
+      "verified_by": null,
+      "method": null,
+      "notes": "Scanner alert initialized; pending verification evaluation"
+    },
+    "ai_advisory": {
+      "recommendation": "",
+      "reference": "<p>https://datatracker.ietf.org/doc/html/rfc7234</p><p>https://datatracker.ietf.org/doc/html/rfc7231</p><p>https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html</p>",
+      "remediation_guidance": null,
+      "analysis": null
+    },
+    "provenance": {
+      "scanner": "OWASP ZAP",
+      "provenance_label": "LIVE SCAN: OWASP ZAP",
+      "source_file": "zap-findings-live.json",
+      "plugin_id": "10049",
+      "alert_ref": "10049-2",
+      "source_id": "7",
+      "site_name": "http://host.docker.internal:3000",
+      "site_host": "host.docker.internal",
+      "site_port": "3000",
+      "site_ssl": "false",
+      "raw_uri": "http://host.docker.internal:3000/sitemap.xml"
+    }
+  },
+  {
+    "id": "ZAP-10049-2-62933c25",
+    "source_type": "web",
+    "source_tool": "OWASP ZAP",
+    "title": "Storable but Non-Cacheable Content",
+    "cwe_id": "CWE-524",
+    "risk_rating": "Informational",
+    "priority": null,
+    "affected_asset": {
+      "url": "http://localhost:8000/styles.css",
+      "method": "GET",
+      "parameter": ""
+    },
+    "description": "<p>The response contents are storable by caching components such as proxy servers, but will not be retrieved directly from the cache, without validating the request upstream, in response to similar requests from other users.</p>",
+    "evidence": {
+      "observed_at": null,
+      "attack": "",
+      "evidence": "max-age=0",
+      "other_info": "",
+      "request": null,
+      "response": null
+    },
+    "verification": {
+      "status": "NEEDS_VERIFICATION",
+      "verified": false,
+      "verified_at": null,
+      "verified_by": null,
+      "method": null,
+      "notes": "Scanner alert initialized; pending verification evaluation"
+    },
+    "ai_advisory": {
+      "recommendation": "",
+      "reference": "<p>https://datatracker.ietf.org/doc/html/rfc7234</p><p>https://datatracker.ietf.org/doc/html/rfc7231</p><p>https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html</p>",
+      "remediation_guidance": null,
+      "analysis": null
+    },
+    "provenance": {
+      "scanner": "OWASP ZAP",
+      "provenance_label": "LIVE SCAN: OWASP ZAP",
+      "source_file": "zap-findings-live.json",
+      "plugin_id": "10049",
+      "alert_ref": "10049-2",
+      "source_id": "7",
+      "site_name": "http://host.docker.internal:3000",
+      "site_host": "host.docker.internal",
+      "site_port": "3000",
+      "site_ssl": "false",
+      "raw_uri": "http://host.docker.internal:3000/styles.css"
+    }
+  }
+]
