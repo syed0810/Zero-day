@@ -1,0 +1,292 @@
+{
+  "check_1_files": {
+    "Dataset (train.parquet)": {
+      "present": true,
+      "size_bytes": 3725262,
+      "path": "C:\\Users\\Syed\\Downloads\\zrd1\\zrd1\\train.parquet"
+    },
+    "Training Script (train_decision_model.py)": {
+      "present": true,
+      "size_bytes": 14414,
+      "path": "C:\\Users\\Syed\\Downloads\\zrd1\\zrd1\\train_decision_model.py"
+    },
+    "Inference Engine (policy_model.py)": {
+      "present": true,
+      "size_bytes": 11817,
+      "path": "C:\\Users\\Syed\\Downloads\\zrd1\\zrd1\\policy_model.py"
+    },
+    "Decision Engine (decision_engine.py)": {
+      "present": true,
+      "size_bytes": 11988,
+      "path": "C:\\Users\\Syed\\Downloads\\zrd1\\zrd1\\decision_engine.py"
+    },
+    "Saved Model (policy_model.joblib)": {
+      "present": true,
+      "size_bytes": 1765034,
+      "path": "C:\\Users\\Syed\\Downloads\\zrd1\\zrd1\\policy_model.joblib"
+    },
+    "Metadata (policy_model_metadata.json)": {
+      "present": true,
+      "size_bytes": 58759,
+      "path": "C:\\Users\\Syed\\Downloads\\zrd1\\zrd1\\policy_model_metadata.json"
+    },
+    "Requirements (requirements.txt)": {
+      "present": true,
+      "size_bytes": 144,
+      "path": "C:\\Users\\Syed\\Downloads\\zrd1\\zrd1\\requirements.txt"
+    }
+  },
+  "check_2_dataset": {
+    "num_rows": 36424,
+    "columns": [
+      "id",
+      "schema_version",
+      "title",
+      "vulnerability",
+      "target",
+      "scenario",
+      "provenance",
+      "source",
+      "tags",
+      "collection_metadata",
+      "license_note"
+    ],
+    "unique_scenarios": 36424,
+    "duplicates": 0,
+    "missing_vulnerabilities": 0,
+    "missing_process_steps": 0,
+    "top_vuln_classes": {
+      "CTF Challenge Solving (General Process)": 8250,
+      "Reflected Cross-Site Scripting (XSS)": 3255,
+      "Broken Access Control / Privilege Escalation": 2439,
+      "TryHackMe Room Solving (General Process)": 2420,
+      "Sensitive Information Disclosure": 2379,
+      "Memory Corruption": 1633,
+      "SQL Injection": 1620,
+      "HackTheBox Machine Solving (General Process)": 1509
+    },
+    "severities": {
+      "low": 2145,
+      "medium": 4062,
+      "high": 2909,
+      "unknown": 26048,
+      "critical": 1260
+    },
+    "target_types": {
+      "web": 20814,
+      "binary": 1633,
+      "other": 13306,
+      "blockchain": 227,
+      "api": 281,
+      "network": 163
+    },
+    "source_platforms": {
+      "hackerone": 11100,
+      "ghsa": 2488,
+      "aggregated_writeup": 10301,
+      "tryhackme": 2541,
+      "hackthebox": 1530,
+      "ctf": 8464
+    }
+  },
+  "check_3_training_script": {
+    "trajectory_features_present": true,
+    "severity_weighting_present": true,
+    "prior_action_failed_active": true,
+    "group_split_by_vuln_id": true,
+    "sha256_serialization": true,
+    "allowed_actions": [
+      "collect_more_evidence",
+      "inspect_related_endpoint",
+      "verify_finding",
+      "recommend_remediation",
+      "manual_review"
+    ]
+  },
+  "check_4_saved_model": {
+    "model_type": "RandomForestClassifier",
+    "n_estimators": 50,
+    "max_depth": 16,
+    "num_features": 110,
+    "classes": [
+      "collect_more_evidence",
+      "inspect_related_endpoint",
+      "manual_review",
+      "recommend_remediation",
+      "verify_finding"
+    ],
+    "all_classes_plain_str": true,
+    "metadata_acc": 0.9995389048991354,
+    "metadata_records": 202853,
+    "metadata_scenarios": 36424,
+    "library_versions": {
+      "scikit_learn": "1.9.1",
+      "installed_scikit_learn": "1.9.1",
+      "numpy": "2.5.2",
+      "pyarrow": "26.0.0",
+      "joblib": "1.6.0"
+    },
+    "split_method": "GroupShuffleSplit by vulnerability_id (15% held-out test split)",
+    "recorded_sha256": "935ae9fdc9f76ccdcdd456fa754d12b428ab228ba1e67c8b1c7b531251d56149"
+  },
+  "check_5_reproducibility": {
+    "sha256_verified": true,
+    "model_wrapper_loaded": true,
+    "inference_deterministic": true,
+    "sample_prediction": "inspect_related_endpoint",
+    "random_seed_used": 42
+  },
+  "check_6_data_leakage": {
+    "split_unit": "vulnerability_id (CVE / GHSA / CWE-Class-Platform tuple)",
+    "total_unique_vulnerabilities": 6592,
+    "train_vulnerability_count": 5603,
+    "test_vulnerability_count": 989,
+    "crossover_leakage_count": 0,
+    "leakage_free": true
+  },
+  "check_7_held_out_benchmark": {
+    "test_records_evaluated": 34700,
+    "test_vulnerabilities_evaluated": 989,
+    "saved_model_accuracy": 0.9995389048991354,
+    "classes": [
+      "collect_more_evidence",
+      "inspect_related_endpoint",
+      "manual_review",
+      "recommend_remediation",
+      "verify_finding"
+    ],
+    "confusion_matrix": [
+      [
+        3865,
+        13,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        16216,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        389,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        10262,
+        0
+      ],
+      [
+        0,
+        3,
+        0,
+        0,
+        3952
+      ]
+    ],
+    "classification_report": {
+      "collect_more_evidence": {
+        "precision": 1.0,
+        "recall": 0.9966477565755544,
+        "f1-score": 0.9983210641870076,
+        "support": 3878.0
+      },
+      "inspect_related_endpoint": {
+        "precision": 0.9990142927550517,
+        "recall": 1.0,
+        "f1-score": 0.9995069033530573,
+        "support": 16216.0
+      },
+      "manual_review": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 389.0
+      },
+      "recommend_remediation": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 10262.0
+      },
+      "verify_finding": {
+        "precision": 1.0,
+        "recall": 0.9992414664981036,
+        "f1-score": 0.9996205893512078,
+        "support": 3955.0
+      },
+      "accuracy": 0.9995389048991354,
+      "macro avg": {
+        "precision": 0.9998028585510103,
+        "recall": 0.9991778446147317,
+        "f1-score": 0.9994897113782546,
+        "support": 34700.0
+      },
+      "weighted avg": {
+        "precision": 0.999539359403917,
+        "recall": 0.9995389048991354,
+        "f1-score": 0.9995386876822598,
+        "support": 34700.0
+      }
+    },
+    "verify_to_collect_errors": 0
+  },
+  "check_8_error_risk": {
+    "total_test_records": 34700,
+    "total_correct": 34684,
+    "total_errors": 16,
+    "error_rate_pct": 0.046109510086455335,
+    "verify_to_collect_errors": 0,
+    "safety_assessment": "Zero verify->collect regression. All actions bounded to safe allowlist."
+  },
+  "check_9_edge_cases": [
+    {
+      "description": "Completely empty finding",
+      "predicted_action": "manual_review",
+      "is_valid": true
+    },
+    {
+      "description": "Zero-day kernel UAF (unknown category)",
+      "predicted_action": "inspect_related_endpoint",
+      "is_valid": true
+    },
+    {
+      "description": "Unseen source type (AWS S3 bucket)",
+      "predicted_action": "manual_review",
+      "is_valid": true
+    },
+    {
+      "description": "Missing severity & phase",
+      "predicted_action": "manual_review",
+      "is_valid": true
+    },
+    {
+      "description": "ZAP: CSP Not Set (Informational)",
+      "predicted_action": "inspect_related_endpoint",
+      "is_valid": true
+    },
+    {
+      "description": "ZAP: Cookie Without SameSite",
+      "predicted_action": "inspect_related_endpoint",
+      "is_valid": true
+    }
+  ],
+  "check_10_deployment": {
+    "rule_1_blocks_unevidenced_remediation": true,
+    "rule_1_resulting_action": "inspect_related_endpoint",
+    "rule_2_failure_escalates": true,
+    "rule_2_resulting_action": "inspect_related_endpoint",
+    "rule_3_novel_escalates_to_review": true,
+    "rule_3_resulting_action": "manual_review",
+    "deployment_status": "READY FOR STAGED SEC-OPS DEPLOYMENT"
+  },
+  "audit_timestamp": "2026-10-22T16:04:24Z"
+}

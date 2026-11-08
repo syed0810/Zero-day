@@ -1,0 +1,1934 @@
+{
+  "run_id": "run_20261023_103557",
+  "timestamp": "2026-10-23T10:56:04.571898+00:00",
+  "authorized_scopes": [
+    "https://hacktober.awsatria.tech/"
+  ],
+  "total_evaluations": 38,
+  "allow_count": 0,
+  "deny_count": 38,
+  "decisions": [
+    {
+      "finding_id": "ZAP-10038-1-644b3ad4",
+      "title": "Content Security Policy (CSP) Header Not Set",
+      "target_url": "http://localhost:3000/",
+      "suggested_action": "inspect_related_endpoint",
+      "decision": "DENY",
+      "reason": "Target URL 'http://localhost:3000/' host 'localhost' is outside authorized scope (https://hacktober.awsatria.tech/). Tactical action 'inspect_related_endpoint' blocked by Policy Gate.",
+      "authorized_scopes": [
+        "https://hacktober.awsatria.tech/"
+      ],
+      "timestamp": "2026-10-23T10:56:04.565122+00:00"
+    },
+    {
+      "finding_id": "ZAP-10038-1-9ddbe9c8",
+      "title": "Content Security Policy (CSP) Header Not Set",
+      "target_url": "http://localhost:3000/ftp/coupons_2013.md.bak",
+      "suggested_action": "inspect_related_endpoint",
+      "decision": "DENY",
+      "reason": "Target URL 'http://localhost:3000/ftp/coupons_2013.md.bak' host 'localhost' is outside authorized scope (https://hacktober.awsatria.tech/). Tactical action 'inspect_related_endpoint' blocked by Policy Gate.",
+      "authorized_scopes": [
+        "https://hacktober.awsatria.tech/"
+      ],
+      "timestamp": "2026-10-23T10:56:04.566695+00:00"
+    },
+    {
+      "finding_id": "ZAP-10038-1-79bfae1e",
+      "title": "Content Security Policy (CSP) Header Not Set",
+      "target_url": "http://localhost:3000/ftp/eastere.gg",
+      "suggested_action": "inspect_related_endpoint",
+      "decision": "DENY",
+      "reason": "Target URL 'http://localhost:3000/ftp/eastere.gg' host 'localhost' is outside authorized scope (https://hacktober.awsatria.tech/). Tactical action 'inspect_related_endpoint' blocked by Policy Gate.",
+      "authorized_scopes": [
+        "https://hacktober.awsatria.tech/"
+      ],
+      "timestamp": "2026-10-23T10:56:04.566827+00:00"
+    },
+    {
+      "finding_id": "ZAP-10038-1-82d27aa5",
+      "title": "Content Security Policy (CSP) Header Not Set",
+      "target_url": "http://localhost:3000/ftp/package.json.bak",
+      "suggested_action": "inspect_related_endpoint",
+      "decision": "DENY",
+      "reason": "Target URL 'http://localhost:3000/ftp/package.json.bak' host 'localhost' is outside authorized scope (https://hacktober.awsatria.tech/). Tactical action 'inspect_related_endpoint' blocked by Policy Gate.",
+      "authorized_scopes": [
+        "https://hacktober.awsatria.tech/"
+      ],
+      "timestamp": "2026-10-23T10:56:04.567533+00:00"
+    },
+    {
+      "finding_id": "ZAP-10038-1-22beb562",
+      "title": "Content Security Policy (CSP) Header Not Set",
+      "target_url": "http://localhost:3000/sitemap.xml",
+      "suggested_action": "inspect_related_endpoint",
+      "decision": "DENY",
+      "reason": "Target URL 'http://localhost:3000/sitemap.xml' host 'localhost' is outside authorized scope (https://hacktober.awsatria.tech/). Tactical action 'inspect_related_endpoint' blocked by Policy Gate.",
+      "authorized_scopes": [
+        "https://hacktober.awsatria.tech/"
+      ],
+      "timestamp": "2026-10-23T10:56:04.567627+00:00"
+    },
+    {
+      "finding_id": "ZAP-10098-44c82452",
+      "title": "Cross-Domain Misconfiguration",
+      "target_url": "http://localhost:3000/",
+      "suggested_action": "inspect_related_endpoint",
+      "decision": "DENY",
+      "reason": "Target URL 'http://localhost:3000/' host 'localhost' is outside authorized scope (https://hacktober.awsatria.tech/). Tactical action 'inspect_related_endpoint' blocked by Policy Gate.",
+      "authorized_scopes": [
+        "https://hacktober.awsatria.tech/"
+      ],
+      "timestamp": "2026-10-23T10:56:04.567710+00:00"
+    },
+    {
+      "finding_id": "ZAP-10098-c07dbd89",
+      "title": "Cross-Domain Misconfiguration",
+      "target_url": "http://localhost:3000/assets/public/favicon_js.ico",
+      "suggested_action": "inspect_related_endpoint",
+      "decision": "DENY",
+      "reason": "Target URL 'http://localhost:3000/assets/public/favicon_js.ico' host 'localhost' is outside authorized scope (https://hacktober.awsatria.tech/). Tactical action 'inspect_related_endpoint' blocked by Policy Gate.",
+      "authorized_scopes": [
+        "https://hacktober.awsatria.tech/"
+      ],
+      "timestamp": "2026-10-23T10:56:04.567846+00:00"
+    },
+    {
+      "finding_id": "ZAP-10098-018e858e",
+      "title": "Cross-Domain Misconfiguration",
+      "target_url": "http://localhost:3000/robots.txt",
+      "suggested_action": "inspect_related_endpoint",
+      "decision": "DENY",
+      "reason": "Target URL 'http://localhost:3000/robots.txt' host 'localhost' is outside authorized scope (https://hacktober.awsatria.tech/). Tactical action 'inspect_related_endpoint' blocked by Policy Gate.",
+      "authorized_scopes": [
+        "https://hacktober.awsatria.tech/"
+      ],
+      "timestamp": "2026-10-23T10:56:04.567967+00:00"
+    },
+    {
+      "finding_id": "ZAP-10098-b9b4c059",
+      "title": "Cross-Domain Misconfiguration",
+      "target_url": "http://localhost:3000/rolldown-runtime-BoHGiXSq.js",
+      "suggested_action": "inspect_related_endpoint",
+      "decision": "DENY",
+      "reason": "Target URL 'http://localhost:3000/rolldown-runtime-BoHGiXSq.js' host 'localhost' is outside authorized scope (https://hacktober.awsatria.tech/). Tactical action 'inspect_related_endpoint' blocked by Policy Gate.",
+      "authorized_scopes": [
+        "https://hacktober.awsatria.tech/"
+      ],
+      "timestamp": "2026-10-23T10:56:04.568039+00:00"
+    },
+    {
+      "finding_id": "ZAP-10098-b46cae3a",
+      "title": "Cross-Domain Misconfiguration",
+      "target_url": "http://localhost:3000/sitemap.xml",
+      "suggested_action": "inspect_related_endpoint",
+      "decision": "DENY",
+      "reason": "Target URL 'http://localhost:3000/sitemap.xml' host 'localhost' is outside authorized scope (https://hacktober.awsatria.tech/). Tactical action 'inspect_related_endpoint' blocked by Policy Gate.",
+      "authorized_scopes": [
+        "https://hacktober.awsatria.tech/"
+      ],
+      "timestamp": "2026-10-23T10:56:04.568098+00:00"
+    },
+    {
+      "finding_id": "ZAP-90004-2-d4d8340e",
+      "title": "Cross-Origin-Embedder-Policy Header Missing or Invalid",
+      "target_url": "http://localhost:3000/",
+      "suggested_action": "inspect_related_endpoint",
+      "decision": "DENY",
+      "reason": "Target URL 'http://localhost:3000/' host 'localhost' is outside authorized scope (https://hacktober.awsatria.tech/). Tactical action 'inspect_related_endpoint' blocked by Policy Gate.",
+      "authorized_scopes": [
+        "https://hacktober.awsatria.tech/"
+      ],
+      "timestamp": "2026-10-23T10:56:04.568160+00:00"
+    },
+    {
+      "finding_id": "ZAP-90004-2-6a7a959f",
+      "title": "Cross-Origin-Embedder-Policy Header Missing or Invalid",
+      "target_url": "http://localhost:3000/ftp",
+      "suggested_action": "inspect_related_endpoint",
+      "decision": "DENY",
+      "reason": "Target URL 'http://localhost:3000/ftp' host 'localhost' is outside authorized scope (https://hacktober.awsatria.tech/). Tactical action 'inspect_related_endpoint' blocked by Policy Gate.",
+      "authorized_scopes": [
+        "https://hacktober.awsatria.tech/"
+      ],
+      "timestamp": "2026-10-23T10:56:04.568220+00:00"
+    },
+    {
+      "finding_id": "ZAP-90004-2-b83c0251",
+      "title": "Cross-Origin-Embedder-Policy Header Missing or Invalid",
+      "target_url": "http://localhost:3000/juice-shop/build/routes/fileServer.js:68:18",
+      "suggested_action": "inspect_related_endpoint",
+      "decision": "DENY",
+      "reason": "Target URL 'http://localhost:3000/juice-shop/build/routes/fileServer.js:68:18' host 'localhost' is outside authorized scope (https://hacktober.awsatria.tech/). Tactical action 'inspect_related_endpoint' blocked by Policy Gate.",
+      "authorized_scopes": [
+        "https://hacktober.awsatria.tech/"
+      ],
+      "timestamp": "2026-10-23T10:56:04.568268+00:00"
+    },
+    {
+      "finding_id": "ZAP-90004-2-0a9c6759",
+      "title": "Cross-Origin-Embedder-Policy Header Missing or Invalid",
+      "target_url": "http://localhost:3000/juice-shop/node_modules/express/lib/router/index.js:286:9",
+      "suggested_action": "inspect_related_endpoint",
+      "decision": "DENY",
+      "reason": "Target URL 'http://localhost:3000/juice-shop/node_modules/express/lib/router/index.js:286:9' host 'localhost' is outside authorized scope (https://hacktober.awsatria.tech/). Tactical action 'inspect_related_endpoint' blocked by Policy Gate.",
+      "authorized_scopes": [
+        "https://hacktober.awsatria.tech/"
+      ],
+      "timestamp": "2026-10-23T10:56:04.568318+00:00"
+    },
+    {
+      "finding_id": "ZAP-90004-2-7bfd49fb",
+      "title": "Cross-Origin-Embedder-Policy Header Missing or Invalid",
+      "target_url": "http://localhost:3000/sitemap.xml",
+      "suggested_action": "inspect_related_endpoint",
+      "decision": "DENY",
+      "reason": "Target URL 'http://localhost:3000/sitemap.xml' host 'localhost' is outside authorized scope (https://hacktober.awsatria.tech/). Tactical action 'inspect_related_endpoint' blocked by Policy Gate.",
+      "authorized_scopes": [
+        "https://hacktober.awsatria.tech/"
+      ],
+      "timestamp": "2026-10-23T10:56:04.568365+00:00"
+    },
+    {
+      "finding_id": "ZAP-90004-3-3dd4e18b",
+      "title": "Cross-Origin-Opener-Policy Header Missing or Invalid",
+      "target_url": "http://localhost:3000/",
+      "suggested_action": "inspect_related_endpoint",
+      "decision": "DENY",
+      "reason": "Target URL 'http://localhost:3000/' host 'localhost' is outside authorized scope (https://hacktober.awsatria.tech/). Tactical action 'inspect_related_endpoint' blocked by Policy Gate.",
+      "authorized_scopes": [
+        "https://hacktober.awsatria.tech/"
+      ],
+      "timestamp": "2026-10-23T10:56:04.568504+00:00"
+    },
+    {
+      "finding_id": "ZAP-90004-3-d95776d3",
+      "title": "Cross-Origin-Opener-Policy Header Missing or Invalid",
+      "target_url": "http://localhost:3000/ftp",
+      "suggested_action": "inspect_related_endpoint",
+      "decision": "DENY",
+      "reason": "Target URL 'http://localhost:3000/ftp' host 'localhost' is outside authorized scope (https://hacktober.awsatria.tech/). Tactical action 'inspect_related_endpoint' blocked by Policy Gate.",
+      "authorized_scopes": [
+        "https://hacktober.awsatria.tech/"
+      ],
+      "timestamp": "2026-10-23T10:56:04.568549+00:00"
+    },
+    {
+      "finding_id": "ZAP-90004-3-a5734206",
+      "title": "Cross-Origin-Opener-Policy Header Missing or Invalid",
+      "target_url": "http://localhost:3000/juice-shop/build/routes/fileServer.js:68:18",
+      "suggested_action": "inspect_related_endpoint",
+      "decision": "DENY",
+      "reason": "Target URL 'http://localhost:3000/juice-shop/build/routes/fileServer.js:68:18' host 'localhost' is outside authorized scope (https://hacktober.awsatria.tech/). Tactical action 'inspect_related_endpoint' blocked by Policy Gate.",
+      "authorized_scopes": [
+        "https://hacktober.awsatria.tech/"
+      ],
+      "timestamp": "2026-10-23T10:56:04.568587+00:00"
+    },
+    {
+      "finding_id": "ZAP-90004-3-33089f14",
+      "title": "Cross-Origin-Opener-Policy Header Missing or Invalid",
+      "target_url": "http://localhost:3000/juice-shop/node_modules/express/lib/router/index.js:286:9",
+      "suggested_action": "inspect_related_endpoint",
+      "decision": "DENY",
+      "reason": "Target URL 'http://localhost:3000/juice-shop/node_modules/express/lib/router/index.js:286:9' host 'localhost' is outside authorized scope (https://hacktober.awsatria.tech/). Tactical action 'inspect_related_endpoint' blocked by Policy Gate.",
+      "authorized_scopes": [
+        "https://hacktober.awsatria.tech/"
+      ],
+      "timestamp": "2026-10-23T10:56:04.568625+00:00"
+    },
+    {
+      "finding_id": "ZAP-90004-3-7237f890",
+      "title": "Cross-Origin-Opener-Policy Header Missing or Invalid",
+      "target_url": "http://localhost:3000/sitemap.xml",
+      "suggested_action": "inspect_related_endpoint",
+      "decision": "DENY",
+      "reason": "Target URL 'http://localhost:3000/sitemap.xml' host 'localhost' is outside authorized scope (https://hacktober.awsatria.tech/). Tactical action 'inspect_related_endpoint' blocked by Policy Gate.",
+      "authorized_scopes": [
+        "https://hacktober.awsatria.tech/"
+      ],
+      "timestamp": "2026-10-23T10:56:04.569519+00:00"
+    },
+    {
+      "finding_id": "ZAP-10110-0779592a",
+      "title": "Dangerous JS Functions",
+      "target_url": "http://localhost:3000/chunk-Cv2YgWUq.js",
+      "suggested_action": "recommend_remediation",
+      "decision": "DENY",
+      "reason": "Target URL 'http://localhost:3000/chunk-Cv2YgWUq.js' host 'localhost' is outside authorized scope (https://hacktober.awsatria.tech/). Tactical action 'recommend_remediation' blocked by Policy Gate.",
+      "authorized_scopes": [
+        "https://hacktober.awsatria.tech/"
+      ],
+      "timestamp": "2026-10-23T10:56:04.570204+00:00"
+    },
+    {
+      "finding_id": "ZAP-10110-f432f2d3",
+      "title": "Dangerous JS Functions",
+      "target_url": "http://localhost:3000/main.js",
+      "suggested_action": "recommend_remediation",
+      "decision": "DENY",
+      "reason": "Target URL 'http://localhost:3000/main.js' host 'localhost' is outside authorized scope (https://hacktober.awsatria.tech/). Tactical action 'recommend_remediation' blocked by Policy Gate.",
+      "authorized_scopes": [
+        "https://hacktober.awsatria.tech/"
+      ],
+      "timestamp": "2026-10-23T10:56:04.570604+00:00"
+    },
+    {
+      "finding_id": "ZAP-10063-2-dcf35167",
+      "title": "Deprecated Feature Policy Header Set",
+      "target_url": "http://localhost:3000/",
+      "suggested_action": "recommend_remediation",
+      "decision": "DENY",
+      "reason": "Target URL 'http://localhost:3000/' host 'localhost' is outside authorized scope (https://hacktober.awsatria.tech/). Tactical action 'recommend_remediation' blocked by Policy Gate.",
+      "authorized_scopes": [
+        "https://hacktober.awsatria.tech/"
+      ],
+      "timestamp": "2026-10-23T10:56:04.570831+00:00"
+    },
+    {
+      "finding_id": "ZAP-10063-2-f99656c0",
+      "title": "Deprecated Feature Policy Header Set",
+      "target_url": "http://localhost:3000/chunk-DBPdFzgj.js",
+      "suggested_action": "recommend_remediation",
+      "decision": "DENY",
+      "reason": "Target URL 'http://localhost:3000/chunk-DBPdFzgj.js' host 'localhost' is outside authorized scope (https://hacktober.awsatria.tech/). Tactical action 'recommend_remediation' blocked by Policy Gate.",
+      "authorized_scopes": [
+        "https://hacktober.awsatria.tech/"
+      ],
+      "timestamp": "2026-10-23T10:56:04.570909+00:00"
+    },
+    {
+      "finding_id": "ZAP-10063-2-0a0607a8",
+      "title": "Deprecated Feature Policy Header Set",
+      "target_url": "http://localhost:3000/polyfills.js",
+      "suggested_action": "recommend_remediation",
+      "decision": "DENY",
+      "reason": "Target URL 'http://localhost:3000/polyfills.js' host 'localhost' is outside authorized scope (https://hacktober.awsatria.tech/). Tactical action 'recommend_remediation' blocked by Policy Gate.",
+      "authorized_scopes": [
+        "https://hacktober.awsatria.tech/"
+      ],
+      "timestamp": "2026-10-23T10:56:04.570967+00:00"
+    },
+    {
+      "finding_id": "ZAP-10063-2-f6a07c7d",
+      "title": "Deprecated Feature Policy Header Set",
+      "target_url": "http://localhost:3000/rolldown-runtime-BoHGiXSq.js",
+      "suggested_action": "recommend_remediation",
+      "decision": "DENY",
+      "reason": "Target URL 'http://localhost:3000/rolldown-runtime-BoHGiXSq.js' host 'localhost' is outside authorized scope (https://hacktober.awsatria.tech/). Tactical action 'recommend_remediation' blocked by Policy Gate.",
+      "authorized_scopes": [
+        "https://hacktober.awsatria.tech/"
+      ],
+      "timestamp": "2026-10-23T10:56:04.571019+00:00"
+    },
+    {
+      "finding_id": "ZAP-10063-2-2aa8a666",
+      "title": "Deprecated Feature Policy Header Set",
+      "target_url": "http://localhost:3000/sitemap.xml",
+      "suggested_action": "recommend_remediation",
+      "decision": "DENY",
+      "reason": "Target URL 'http://localhost:3000/sitemap.xml' host 'localhost' is outside authorized scope (https://hacktober.awsatria.tech/). Tactical action 'recommend_remediation' blocked by Policy Gate.",
+      "authorized_scopes": [
+        "https://hacktober.awsatria.tech/"
+      ],
+      "timestamp": "2026-10-23T10:56:04.571086+00:00"
+    },
+    {
+      "finding_id": "ZAP-10109-9863b3d3",
+      "title": "Modern Web Application",
+      "target_url": "http://localhost:3000/",
+      "suggested_action": "recommend_remediation",
+      "decision": "DENY",
+      "reason": "Target URL 'http://localhost:3000/' host 'localhost' is outside authorized scope (https://hacktober.awsatria.tech/). Tactical action 'recommend_remediation' blocked by Policy Gate.",
+      "authorized_scopes": [
+        "https://hacktober.awsatria.tech/"
+      ],
+      "timestamp": "2026-10-23T10:56:04.571139+00:00"
+    },
+    {
+      "finding_id": "ZAP-10109-9f85adef",
+      "title": "Modern Web Application",
+      "target_url": "http://localhost:3000/juice-shop/build/routes/fileServer.js:68:18",
+      "suggested_action": "recommend_remediation",
+      "decision": "DENY",
+      "reason": "Target URL 'http://localhost:3000/juice-shop/build/routes/fileServer.js:68:18' host 'localhost' is outside authorized scope (https://hacktober.awsatria.tech/). Tactical action 'recommend_remediation' blocked by Policy Gate.",
+      "authorized_scopes": [
+        "https://hacktober.awsatria.tech/"
+      ],
+      "timestamp": "2026-10-23T10:56:04.571190+00:00"
+    },
+    {
+      "finding_id": "ZAP-10109-e119dbbb",
+      "title": "Modern Web Application",
+      "target_url": "http://localhost:3000/juice-shop/node_modules/express/lib/router/index.js:286:9",
+      "suggested_action": "recommend_remediation",
+      "decision": "DENY",
+      "reason": "Target URL 'http://localhost:3000/juice-shop/node_modules/express/lib/router/index.js:286:9' host 'localhost' is outside authorized scope (https://hacktober.awsatria.tech/). Tactical action 'recommend_remediation' blocked by Policy Gate.",
+      "authorized_scopes": [
+        "https://hacktober.awsatria.tech/"
+      ],
+      "timestamp": "2026-10-23T10:56:04.571241+00:00"
+    },
+    {
+      "finding_id": "ZAP-10109-6c1581ff",
+      "title": "Modern Web Application",
+      "target_url": "http://localhost:3000/juice-shop/node_modules/express/lib/router/index.js:328:13",
+      "suggested_action": "recommend_remediation",
+      "decision": "DENY",
+      "reason": "Target URL 'http://localhost:3000/juice-shop/node_modules/express/lib/router/index.js:328:13' host 'localhost' is outside authorized scope (https://hacktober.awsatria.tech/). Tactical action 'recommend_remediation' blocked by Policy Gate.",
+      "authorized_scopes": [
+        "https://hacktober.awsatria.tech/"
+      ],
+      "timestamp": "2026-10-23T10:56:04.571290+00:00"
+    },
+    {
+      "finding_id": "ZAP-10109-4e071e62",
+      "title": "Modern Web Application",
+      "target_url": "http://localhost:3000/sitemap.xml",
+      "suggested_action": "recommend_remediation",
+      "decision": "DENY",
+      "reason": "Target URL 'http://localhost:3000/sitemap.xml' host 'localhost' is outside authorized scope (https://hacktober.awsatria.tech/). Tactical action 'recommend_remediation' blocked by Policy Gate.",
+      "authorized_scopes": [
+        "https://hacktober.awsatria.tech/"
+      ],
+      "timestamp": "2026-10-23T10:56:04.571345+00:00"
+    },
+    {
+      "finding_id": "ZAP-10049-3-49497442",
+      "title": "Storable and Cacheable Content",
+      "target_url": "http://localhost:3000/robots.txt",
+      "suggested_action": "inspect_related_endpoint",
+      "decision": "DENY",
+      "reason": "Target URL 'http://localhost:3000/robots.txt' host 'localhost' is outside authorized scope (https://hacktober.awsatria.tech/). Tactical action 'inspect_related_endpoint' blocked by Policy Gate.",
+      "authorized_scopes": [
+        "https://hacktober.awsatria.tech/"
+      ],
+      "timestamp": "2026-10-23T10:56:04.571398+00:00"
+    },
+    {
+      "finding_id": "ZAP-10049-2-00022e0b",
+      "title": "Storable but Non-Cacheable Content",
+      "target_url": "http://localhost:3000/",
+      "suggested_action": "recommend_remediation",
+      "decision": "DENY",
+      "reason": "Target URL 'http://localhost:3000/' host 'localhost' is outside authorized scope (https://hacktober.awsatria.tech/). Tactical action 'recommend_remediation' blocked by Policy Gate.",
+      "authorized_scopes": [
+        "https://hacktober.awsatria.tech/"
+      ],
+      "timestamp": "2026-10-23T10:56:04.571453+00:00"
+    },
+    {
+      "finding_id": "ZAP-10049-2-b5526969",
+      "title": "Storable but Non-Cacheable Content",
+      "target_url": "http://localhost:3000/assets/public/favicon_js.ico",
+      "suggested_action": "recommend_remediation",
+      "decision": "DENY",
+      "reason": "Target URL 'http://localhost:3000/assets/public/favicon_js.ico' host 'localhost' is outside authorized scope (https://hacktober.awsatria.tech/). Tactical action 'recommend_remediation' blocked by Policy Gate.",
+      "authorized_scopes": [
+        "https://hacktober.awsatria.tech/"
+      ],
+      "timestamp": "2026-10-23T10:56:04.571506+00:00"
+    },
+    {
+      "finding_id": "ZAP-10049-2-04d2fba7",
+      "title": "Storable but Non-Cacheable Content",
+      "target_url": "http://localhost:3000/rolldown-runtime-BoHGiXSq.js",
+      "suggested_action": "recommend_remediation",
+      "decision": "DENY",
+      "reason": "Target URL 'http://localhost:3000/rolldown-runtime-BoHGiXSq.js' host 'localhost' is outside authorized scope (https://hacktober.awsatria.tech/). Tactical action 'recommend_remediation' blocked by Policy Gate.",
+      "authorized_scopes": [
+        "https://hacktober.awsatria.tech/"
+      ],
+      "timestamp": "2026-10-23T10:56:04.571554+00:00"
+    },
+    {
+      "finding_id": "ZAP-10049-2-e3ed2a6d",
+      "title": "Storable but Non-Cacheable Content",
+      "target_url": "http://localhost:3000/sitemap.xml",
+      "suggested_action": "recommend_remediation",
+      "decision": "DENY",
+      "reason": "Target URL 'http://localhost:3000/sitemap.xml' host 'localhost' is outside authorized scope (https://hacktober.awsatria.tech/). Tactical action 'recommend_remediation' blocked by Policy Gate.",
+      "authorized_scopes": [
+        "https://hacktober.awsatria.tech/"
+      ],
+      "timestamp": "2026-10-23T10:56:04.571667+00:00"
+    },
+    {
+      "finding_id": "ZAP-10049-2-154ea823",
+      "title": "Storable but Non-Cacheable Content",
+      "target_url": "http://localhost:3000/styles.css",
+      "suggested_action": "recommend_remediation",
+      "decision": "DENY",
+      "reason": "Target URL 'http://localhost:3000/styles.css' host 'localhost' is outside authorized scope (https://hacktober.awsatria.tech/). Tactical action 'recommend_remediation' blocked by Policy Gate.",
+      "authorized_scopes": [
+        "https://hacktober.awsatria.tech/"
+      ],
+      "timestamp": "2026-10-23T10:56:04.571728+00:00"
+    }
+  ],
+  "investigation_summary": {
+    "total_findings": 38,
+    "total_steps": 152,
+    "total_requests": 0,
+    "duration_seconds": 13.33,
+    "action_distribution": {
+      "collect_more_evidence": 0,
+      "inspect_related_endpoint": 0,
+      "verify_finding": 0,
+      "recommend_remediation": 0,
+      "manual_review": 38
+    }
+  },
+  "trajectories": {
+    "ZAP-10038-1-644b3ad4": {
+      "total_steps": 4,
+      "final_action": "manual_review",
+      "trajectory": [
+        {
+          "step": 1,
+          "phase": "initial_scan",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.69,
+          "timestamp": "2026-10-23T10:56:05.132426+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.69). Outbound probe skipped per policy."
+        },
+        {
+          "step": 2,
+          "phase": "enumeration",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.5608,
+          "timestamp": "2026-10-23T10:56:05.249894+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.56). Outbound probe skipped per policy."
+        },
+        {
+          "step": 3,
+          "phase": "deep_analysis",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.7214,
+          "timestamp": "2026-10-23T10:56:05.337334+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.72). Outbound probe skipped per policy."
+        },
+        {
+          "step": 4,
+          "phase": "verification",
+          "action": "verify_finding",
+          "confidence": 0.5753,
+          "timestamp": "2026-10-23T10:56:05.441669+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'verify_finding' selected by decision model (confidence 0.58). Outbound probe skipped per policy."
+        }
+      ]
+    },
+    "ZAP-10038-1-9ddbe9c8": {
+      "total_steps": 4,
+      "final_action": "manual_review",
+      "trajectory": [
+        {
+          "step": 1,
+          "phase": "initial_scan",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.69,
+          "timestamp": "2026-10-23T10:56:05.536381+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.69). Outbound probe skipped per policy."
+        },
+        {
+          "step": 2,
+          "phase": "enumeration",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.5608,
+          "timestamp": "2026-10-23T10:56:05.633576+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.56). Outbound probe skipped per policy."
+        },
+        {
+          "step": 3,
+          "phase": "deep_analysis",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.7214,
+          "timestamp": "2026-10-23T10:56:05.733188+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.72). Outbound probe skipped per policy."
+        },
+        {
+          "step": 4,
+          "phase": "verification",
+          "action": "verify_finding",
+          "confidence": 0.5753,
+          "timestamp": "2026-10-23T10:56:05.866287+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'verify_finding' selected by decision model (confidence 0.58). Outbound probe skipped per policy."
+        }
+      ]
+    },
+    "ZAP-10038-1-79bfae1e": {
+      "total_steps": 4,
+      "final_action": "manual_review",
+      "trajectory": [
+        {
+          "step": 1,
+          "phase": "initial_scan",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.69,
+          "timestamp": "2026-10-23T10:56:05.991931+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.69). Outbound probe skipped per policy."
+        },
+        {
+          "step": 2,
+          "phase": "enumeration",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.5608,
+          "timestamp": "2026-10-23T10:56:06.132474+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.56). Outbound probe skipped per policy."
+        },
+        {
+          "step": 3,
+          "phase": "deep_analysis",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.7214,
+          "timestamp": "2026-10-23T10:56:06.249518+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.72). Outbound probe skipped per policy."
+        },
+        {
+          "step": 4,
+          "phase": "verification",
+          "action": "verify_finding",
+          "confidence": 0.5753,
+          "timestamp": "2026-10-23T10:56:06.342188+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'verify_finding' selected by decision model (confidence 0.58). Outbound probe skipped per policy."
+        }
+      ]
+    },
+    "ZAP-10038-1-82d27aa5": {
+      "total_steps": 4,
+      "final_action": "manual_review",
+      "trajectory": [
+        {
+          "step": 1,
+          "phase": "initial_scan",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.69,
+          "timestamp": "2026-10-23T10:56:06.431789+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.69). Outbound probe skipped per policy."
+        },
+        {
+          "step": 2,
+          "phase": "enumeration",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.5608,
+          "timestamp": "2026-10-23T10:56:06.514785+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.56). Outbound probe skipped per policy."
+        },
+        {
+          "step": 3,
+          "phase": "deep_analysis",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.7214,
+          "timestamp": "2026-10-23T10:56:06.590815+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.72). Outbound probe skipped per policy."
+        },
+        {
+          "step": 4,
+          "phase": "verification",
+          "action": "verify_finding",
+          "confidence": 0.5753,
+          "timestamp": "2026-10-23T10:56:06.672329+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'verify_finding' selected by decision model (confidence 0.58). Outbound probe skipped per policy."
+        }
+      ]
+    },
+    "ZAP-10038-1-22beb562": {
+      "total_steps": 4,
+      "final_action": "manual_review",
+      "trajectory": [
+        {
+          "step": 1,
+          "phase": "initial_scan",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.69,
+          "timestamp": "2026-10-23T10:56:06.727325+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.69). Outbound probe skipped per policy."
+        },
+        {
+          "step": 2,
+          "phase": "enumeration",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.5608,
+          "timestamp": "2026-10-23T10:56:06.771868+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.56). Outbound probe skipped per policy."
+        },
+        {
+          "step": 3,
+          "phase": "deep_analysis",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.7214,
+          "timestamp": "2026-10-23T10:56:06.810811+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.72). Outbound probe skipped per policy."
+        },
+        {
+          "step": 4,
+          "phase": "verification",
+          "action": "verify_finding",
+          "confidence": 0.5753,
+          "timestamp": "2026-10-23T10:56:06.850153+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'verify_finding' selected by decision model (confidence 0.58). Outbound probe skipped per policy."
+        }
+      ]
+    },
+    "ZAP-10098-44c82452": {
+      "total_steps": 4,
+      "final_action": "manual_review",
+      "trajectory": [
+        {
+          "step": 1,
+          "phase": "initial_scan",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.6504,
+          "timestamp": "2026-10-23T10:56:06.898898+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.65). Outbound probe skipped per policy."
+        },
+        {
+          "step": 2,
+          "phase": "enumeration",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.5353,
+          "timestamp": "2026-10-23T10:56:06.935778+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.54). Outbound probe skipped per policy."
+        },
+        {
+          "step": 3,
+          "phase": "deep_analysis",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.7234,
+          "timestamp": "2026-10-23T10:56:06.974433+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.72). Outbound probe skipped per policy."
+        },
+        {
+          "step": 4,
+          "phase": "verification",
+          "action": "verify_finding",
+          "confidence": 0.8799,
+          "timestamp": "2026-10-23T10:56:07.039995+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'verify_finding' selected by decision model (confidence 0.88). Outbound probe skipped per policy."
+        }
+      ]
+    },
+    "ZAP-10098-c07dbd89": {
+      "total_steps": 4,
+      "final_action": "manual_review",
+      "trajectory": [
+        {
+          "step": 1,
+          "phase": "initial_scan",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.6504,
+          "timestamp": "2026-10-23T10:56:07.100702+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.65). Outbound probe skipped per policy."
+        },
+        {
+          "step": 2,
+          "phase": "enumeration",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.5353,
+          "timestamp": "2026-10-23T10:56:07.182393+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.54). Outbound probe skipped per policy."
+        },
+        {
+          "step": 3,
+          "phase": "deep_analysis",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.7234,
+          "timestamp": "2026-10-23T10:56:07.261455+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.72). Outbound probe skipped per policy."
+        },
+        {
+          "step": 4,
+          "phase": "verification",
+          "action": "verify_finding",
+          "confidence": 0.8799,
+          "timestamp": "2026-10-23T10:56:07.341673+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'verify_finding' selected by decision model (confidence 0.88). Outbound probe skipped per policy."
+        }
+      ]
+    },
+    "ZAP-10098-018e858e": {
+      "total_steps": 4,
+      "final_action": "manual_review",
+      "trajectory": [
+        {
+          "step": 1,
+          "phase": "initial_scan",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.6504,
+          "timestamp": "2026-10-23T10:56:07.422864+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.65). Outbound probe skipped per policy."
+        },
+        {
+          "step": 2,
+          "phase": "enumeration",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.5353,
+          "timestamp": "2026-10-23T10:56:07.522721+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.54). Outbound probe skipped per policy."
+        },
+        {
+          "step": 3,
+          "phase": "deep_analysis",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.7234,
+          "timestamp": "2026-10-23T10:56:07.621172+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.72). Outbound probe skipped per policy."
+        },
+        {
+          "step": 4,
+          "phase": "verification",
+          "action": "verify_finding",
+          "confidence": 0.8799,
+          "timestamp": "2026-10-23T10:56:07.706848+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'verify_finding' selected by decision model (confidence 0.88). Outbound probe skipped per policy."
+        }
+      ]
+    },
+    "ZAP-10098-b9b4c059": {
+      "total_steps": 4,
+      "final_action": "manual_review",
+      "trajectory": [
+        {
+          "step": 1,
+          "phase": "initial_scan",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.6504,
+          "timestamp": "2026-10-23T10:56:07.792815+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.65). Outbound probe skipped per policy."
+        },
+        {
+          "step": 2,
+          "phase": "enumeration",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.5353,
+          "timestamp": "2026-10-23T10:56:07.890875+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.54). Outbound probe skipped per policy."
+        },
+        {
+          "step": 3,
+          "phase": "deep_analysis",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.7234,
+          "timestamp": "2026-10-23T10:56:07.982230+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.72). Outbound probe skipped per policy."
+        },
+        {
+          "step": 4,
+          "phase": "verification",
+          "action": "verify_finding",
+          "confidence": 0.8799,
+          "timestamp": "2026-10-23T10:56:08.070946+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'verify_finding' selected by decision model (confidence 0.88). Outbound probe skipped per policy."
+        }
+      ]
+    },
+    "ZAP-10098-b46cae3a": {
+      "total_steps": 4,
+      "final_action": "manual_review",
+      "trajectory": [
+        {
+          "step": 1,
+          "phase": "initial_scan",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.6504,
+          "timestamp": "2026-10-23T10:56:08.164212+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.65). Outbound probe skipped per policy."
+        },
+        {
+          "step": 2,
+          "phase": "enumeration",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.5353,
+          "timestamp": "2026-10-23T10:56:08.250410+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.54). Outbound probe skipped per policy."
+        },
+        {
+          "step": 3,
+          "phase": "deep_analysis",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.7234,
+          "timestamp": "2026-10-23T10:56:08.354759+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.72). Outbound probe skipped per policy."
+        },
+        {
+          "step": 4,
+          "phase": "verification",
+          "action": "verify_finding",
+          "confidence": 0.8799,
+          "timestamp": "2026-10-23T10:56:08.446186+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'verify_finding' selected by decision model (confidence 0.88). Outbound probe skipped per policy."
+        }
+      ]
+    },
+    "ZAP-90004-2-d4d8340e": {
+      "total_steps": 4,
+      "final_action": "manual_review",
+      "trajectory": [
+        {
+          "step": 1,
+          "phase": "initial_scan",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.69,
+          "timestamp": "2026-10-23T10:56:08.537273+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.69). Outbound probe skipped per policy."
+        },
+        {
+          "step": 2,
+          "phase": "enumeration",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.5608,
+          "timestamp": "2026-10-23T10:56:08.620948+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.56). Outbound probe skipped per policy."
+        },
+        {
+          "step": 3,
+          "phase": "deep_analysis",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.7214,
+          "timestamp": "2026-10-23T10:56:08.699968+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.72). Outbound probe skipped per policy."
+        },
+        {
+          "step": 4,
+          "phase": "verification",
+          "action": "verify_finding",
+          "confidence": 0.5753,
+          "timestamp": "2026-10-23T10:56:08.779510+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'verify_finding' selected by decision model (confidence 0.58). Outbound probe skipped per policy."
+        }
+      ]
+    },
+    "ZAP-90004-2-6a7a959f": {
+      "total_steps": 4,
+      "final_action": "manual_review",
+      "trajectory": [
+        {
+          "step": 1,
+          "phase": "initial_scan",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.69,
+          "timestamp": "2026-10-23T10:56:08.823549+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.69). Outbound probe skipped per policy."
+        },
+        {
+          "step": 2,
+          "phase": "enumeration",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.5608,
+          "timestamp": "2026-10-23T10:56:08.865235+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.56). Outbound probe skipped per policy."
+        },
+        {
+          "step": 3,
+          "phase": "deep_analysis",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.7214,
+          "timestamp": "2026-10-23T10:56:08.905441+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.72). Outbound probe skipped per policy."
+        },
+        {
+          "step": 4,
+          "phase": "verification",
+          "action": "verify_finding",
+          "confidence": 0.5753,
+          "timestamp": "2026-10-23T10:56:08.962510+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'verify_finding' selected by decision model (confidence 0.58). Outbound probe skipped per policy."
+        }
+      ]
+    },
+    "ZAP-90004-2-b83c0251": {
+      "total_steps": 4,
+      "final_action": "manual_review",
+      "trajectory": [
+        {
+          "step": 1,
+          "phase": "initial_scan",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.69,
+          "timestamp": "2026-10-23T10:56:09.035863+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.69). Outbound probe skipped per policy."
+        },
+        {
+          "step": 2,
+          "phase": "enumeration",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.5608,
+          "timestamp": "2026-10-23T10:56:09.074097+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.56). Outbound probe skipped per policy."
+        },
+        {
+          "step": 3,
+          "phase": "deep_analysis",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.7214,
+          "timestamp": "2026-10-23T10:56:09.130520+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.72). Outbound probe skipped per policy."
+        },
+        {
+          "step": 4,
+          "phase": "verification",
+          "action": "verify_finding",
+          "confidence": 0.5753,
+          "timestamp": "2026-10-23T10:56:09.210290+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'verify_finding' selected by decision model (confidence 0.58). Outbound probe skipped per policy."
+        }
+      ]
+    },
+    "ZAP-90004-2-0a9c6759": {
+      "total_steps": 4,
+      "final_action": "manual_review",
+      "trajectory": [
+        {
+          "step": 1,
+          "phase": "initial_scan",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.69,
+          "timestamp": "2026-10-23T10:56:09.307582+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.69). Outbound probe skipped per policy."
+        },
+        {
+          "step": 2,
+          "phase": "enumeration",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.5608,
+          "timestamp": "2026-10-23T10:56:09.385923+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.56). Outbound probe skipped per policy."
+        },
+        {
+          "step": 3,
+          "phase": "deep_analysis",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.7214,
+          "timestamp": "2026-10-23T10:56:09.473530+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.72). Outbound probe skipped per policy."
+        },
+        {
+          "step": 4,
+          "phase": "verification",
+          "action": "verify_finding",
+          "confidence": 0.5753,
+          "timestamp": "2026-10-23T10:56:09.541663+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'verify_finding' selected by decision model (confidence 0.58). Outbound probe skipped per policy."
+        }
+      ]
+    },
+    "ZAP-90004-2-7bfd49fb": {
+      "total_steps": 4,
+      "final_action": "manual_review",
+      "trajectory": [
+        {
+          "step": 1,
+          "phase": "initial_scan",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.69,
+          "timestamp": "2026-10-23T10:56:09.607886+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.69). Outbound probe skipped per policy."
+        },
+        {
+          "step": 2,
+          "phase": "enumeration",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.5608,
+          "timestamp": "2026-10-23T10:56:09.679842+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.56). Outbound probe skipped per policy."
+        },
+        {
+          "step": 3,
+          "phase": "deep_analysis",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.7214,
+          "timestamp": "2026-10-23T10:56:09.757330+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.72). Outbound probe skipped per policy."
+        },
+        {
+          "step": 4,
+          "phase": "verification",
+          "action": "verify_finding",
+          "confidence": 0.5753,
+          "timestamp": "2026-10-23T10:56:09.838634+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'verify_finding' selected by decision model (confidence 0.58). Outbound probe skipped per policy."
+        }
+      ]
+    },
+    "ZAP-90004-3-3dd4e18b": {
+      "total_steps": 4,
+      "final_action": "manual_review",
+      "trajectory": [
+        {
+          "step": 1,
+          "phase": "initial_scan",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.69,
+          "timestamp": "2026-10-23T10:56:09.930952+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.69). Outbound probe skipped per policy."
+        },
+        {
+          "step": 2,
+          "phase": "enumeration",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.5608,
+          "timestamp": "2026-10-23T10:56:10.016780+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.56). Outbound probe skipped per policy."
+        },
+        {
+          "step": 3,
+          "phase": "deep_analysis",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.7214,
+          "timestamp": "2026-10-23T10:56:10.094984+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.72). Outbound probe skipped per policy."
+        },
+        {
+          "step": 4,
+          "phase": "verification",
+          "action": "verify_finding",
+          "confidence": 0.5753,
+          "timestamp": "2026-10-23T10:56:10.154032+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'verify_finding' selected by decision model (confidence 0.58). Outbound probe skipped per policy."
+        }
+      ]
+    },
+    "ZAP-90004-3-d95776d3": {
+      "total_steps": 4,
+      "final_action": "manual_review",
+      "trajectory": [
+        {
+          "step": 1,
+          "phase": "initial_scan",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.69,
+          "timestamp": "2026-10-23T10:56:10.233026+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.69). Outbound probe skipped per policy."
+        },
+        {
+          "step": 2,
+          "phase": "enumeration",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.5608,
+          "timestamp": "2026-10-23T10:56:10.322640+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.56). Outbound probe skipped per policy."
+        },
+        {
+          "step": 3,
+          "phase": "deep_analysis",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.7214,
+          "timestamp": "2026-10-23T10:56:10.401784+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.72). Outbound probe skipped per policy."
+        },
+        {
+          "step": 4,
+          "phase": "verification",
+          "action": "verify_finding",
+          "confidence": 0.5753,
+          "timestamp": "2026-10-23T10:56:10.448383+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'verify_finding' selected by decision model (confidence 0.58). Outbound probe skipped per policy."
+        }
+      ]
+    },
+    "ZAP-90004-3-a5734206": {
+      "total_steps": 4,
+      "final_action": "manual_review",
+      "trajectory": [
+        {
+          "step": 1,
+          "phase": "initial_scan",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.69,
+          "timestamp": "2026-10-23T10:56:10.489512+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.69). Outbound probe skipped per policy."
+        },
+        {
+          "step": 2,
+          "phase": "enumeration",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.5608,
+          "timestamp": "2026-10-23T10:56:10.530869+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.56). Outbound probe skipped per policy."
+        },
+        {
+          "step": 3,
+          "phase": "deep_analysis",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.7214,
+          "timestamp": "2026-10-23T10:56:10.570516+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.72). Outbound probe skipped per policy."
+        },
+        {
+          "step": 4,
+          "phase": "verification",
+          "action": "verify_finding",
+          "confidence": 0.5753,
+          "timestamp": "2026-10-23T10:56:10.609805+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'verify_finding' selected by decision model (confidence 0.58). Outbound probe skipped per policy."
+        }
+      ]
+    },
+    "ZAP-90004-3-33089f14": {
+      "total_steps": 4,
+      "final_action": "manual_review",
+      "trajectory": [
+        {
+          "step": 1,
+          "phase": "initial_scan",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.69,
+          "timestamp": "2026-10-23T10:56:10.647607+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.69). Outbound probe skipped per policy."
+        },
+        {
+          "step": 2,
+          "phase": "enumeration",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.5608,
+          "timestamp": "2026-10-23T10:56:10.718003+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.56). Outbound probe skipped per policy."
+        },
+        {
+          "step": 3,
+          "phase": "deep_analysis",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.7214,
+          "timestamp": "2026-10-23T10:56:10.791799+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.72). Outbound probe skipped per policy."
+        },
+        {
+          "step": 4,
+          "phase": "verification",
+          "action": "verify_finding",
+          "confidence": 0.5753,
+          "timestamp": "2026-10-23T10:56:10.858946+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'verify_finding' selected by decision model (confidence 0.58). Outbound probe skipped per policy."
+        }
+      ]
+    },
+    "ZAP-90004-3-7237f890": {
+      "total_steps": 4,
+      "final_action": "manual_review",
+      "trajectory": [
+        {
+          "step": 1,
+          "phase": "initial_scan",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.69,
+          "timestamp": "2026-10-23T10:56:10.936384+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.69). Outbound probe skipped per policy."
+        },
+        {
+          "step": 2,
+          "phase": "enumeration",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.5608,
+          "timestamp": "2026-10-23T10:56:11.023190+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.56). Outbound probe skipped per policy."
+        },
+        {
+          "step": 3,
+          "phase": "deep_analysis",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.7214,
+          "timestamp": "2026-10-23T10:56:11.110839+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.72). Outbound probe skipped per policy."
+        },
+        {
+          "step": 4,
+          "phase": "verification",
+          "action": "verify_finding",
+          "confidence": 0.5753,
+          "timestamp": "2026-10-23T10:56:11.195850+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'verify_finding' selected by decision model (confidence 0.58). Outbound probe skipped per policy."
+        }
+      ]
+    },
+    "ZAP-10110-0779592a": {
+      "total_steps": 4,
+      "final_action": "manual_review",
+      "trajectory": [
+        {
+          "step": 1,
+          "phase": "initial_scan",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.6661,
+          "timestamp": "2026-10-23T10:56:11.278699+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.67). Outbound probe skipped per policy."
+        },
+        {
+          "step": 2,
+          "phase": "enumeration",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.5305,
+          "timestamp": "2026-10-23T10:56:11.358978+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.53). Outbound probe skipped per policy."
+        },
+        {
+          "step": 3,
+          "phase": "deep_analysis",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.7232,
+          "timestamp": "2026-10-23T10:56:11.434134+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.72). Outbound probe skipped per policy."
+        },
+        {
+          "step": 4,
+          "phase": "verification",
+          "action": "verify_finding",
+          "confidence": 0.6344,
+          "timestamp": "2026-10-23T10:56:11.480391+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'verify_finding' selected by decision model (confidence 0.63). Outbound probe skipped per policy."
+        }
+      ]
+    },
+    "ZAP-10110-f432f2d3": {
+      "total_steps": 4,
+      "final_action": "manual_review",
+      "trajectory": [
+        {
+          "step": 1,
+          "phase": "initial_scan",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.6661,
+          "timestamp": "2026-10-23T10:56:11.537306+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.67). Outbound probe skipped per policy."
+        },
+        {
+          "step": 2,
+          "phase": "enumeration",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.5305,
+          "timestamp": "2026-10-23T10:56:11.597245+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.53). Outbound probe skipped per policy."
+        },
+        {
+          "step": 3,
+          "phase": "deep_analysis",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.7232,
+          "timestamp": "2026-10-23T10:56:11.655397+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.72). Outbound probe skipped per policy."
+        },
+        {
+          "step": 4,
+          "phase": "verification",
+          "action": "verify_finding",
+          "confidence": 0.6344,
+          "timestamp": "2026-10-23T10:56:11.737085+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'verify_finding' selected by decision model (confidence 0.63). Outbound probe skipped per policy."
+        }
+      ]
+    },
+    "ZAP-10063-2-dcf35167": {
+      "total_steps": 4,
+      "final_action": "manual_review",
+      "trajectory": [
+        {
+          "step": 1,
+          "phase": "initial_scan",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.6661,
+          "timestamp": "2026-10-23T10:56:11.816034+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.67). Outbound probe skipped per policy."
+        },
+        {
+          "step": 2,
+          "phase": "enumeration",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.5305,
+          "timestamp": "2026-10-23T10:56:11.879119+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.53). Outbound probe skipped per policy."
+        },
+        {
+          "step": 3,
+          "phase": "deep_analysis",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.7232,
+          "timestamp": "2026-10-23T10:56:11.958118+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.72). Outbound probe skipped per policy."
+        },
+        {
+          "step": 4,
+          "phase": "verification",
+          "action": "verify_finding",
+          "confidence": 0.6344,
+          "timestamp": "2026-10-23T10:56:12.034083+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'verify_finding' selected by decision model (confidence 0.63). Outbound probe skipped per policy."
+        }
+      ]
+    },
+    "ZAP-10063-2-f99656c0": {
+      "total_steps": 4,
+      "final_action": "manual_review",
+      "trajectory": [
+        {
+          "step": 1,
+          "phase": "initial_scan",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.6661,
+          "timestamp": "2026-10-23T10:56:12.120422+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.67). Outbound probe skipped per policy."
+        },
+        {
+          "step": 2,
+          "phase": "enumeration",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.5305,
+          "timestamp": "2026-10-23T10:56:12.233810+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.53). Outbound probe skipped per policy."
+        },
+        {
+          "step": 3,
+          "phase": "deep_analysis",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.7232,
+          "timestamp": "2026-10-23T10:56:12.363968+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.72). Outbound probe skipped per policy."
+        },
+        {
+          "step": 4,
+          "phase": "verification",
+          "action": "verify_finding",
+          "confidence": 0.6344,
+          "timestamp": "2026-10-23T10:56:12.491210+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'verify_finding' selected by decision model (confidence 0.63). Outbound probe skipped per policy."
+        }
+      ]
+    },
+    "ZAP-10063-2-0a0607a8": {
+      "total_steps": 4,
+      "final_action": "manual_review",
+      "trajectory": [
+        {
+          "step": 1,
+          "phase": "initial_scan",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.6661,
+          "timestamp": "2026-10-23T10:56:12.635833+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.67). Outbound probe skipped per policy."
+        },
+        {
+          "step": 2,
+          "phase": "enumeration",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.5305,
+          "timestamp": "2026-10-23T10:56:12.727310+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.53). Outbound probe skipped per policy."
+        },
+        {
+          "step": 3,
+          "phase": "deep_analysis",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.7232,
+          "timestamp": "2026-10-23T10:56:12.896066+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.72). Outbound probe skipped per policy."
+        },
+        {
+          "step": 4,
+          "phase": "verification",
+          "action": "verify_finding",
+          "confidence": 0.6344,
+          "timestamp": "2026-10-23T10:56:12.999929+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'verify_finding' selected by decision model (confidence 0.63). Outbound probe skipped per policy."
+        }
+      ]
+    },
+    "ZAP-10063-2-f6a07c7d": {
+      "total_steps": 4,
+      "final_action": "manual_review",
+      "trajectory": [
+        {
+          "step": 1,
+          "phase": "initial_scan",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.6661,
+          "timestamp": "2026-10-23T10:56:13.114278+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.67). Outbound probe skipped per policy."
+        },
+        {
+          "step": 2,
+          "phase": "enumeration",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.5305,
+          "timestamp": "2026-10-23T10:56:13.204438+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.53). Outbound probe skipped per policy."
+        },
+        {
+          "step": 3,
+          "phase": "deep_analysis",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.7232,
+          "timestamp": "2026-10-23T10:56:13.290730+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.72). Outbound probe skipped per policy."
+        },
+        {
+          "step": 4,
+          "phase": "verification",
+          "action": "verify_finding",
+          "confidence": 0.6344,
+          "timestamp": "2026-10-23T10:56:13.379880+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'verify_finding' selected by decision model (confidence 0.63). Outbound probe skipped per policy."
+        }
+      ]
+    },
+    "ZAP-10063-2-2aa8a666": {
+      "total_steps": 4,
+      "final_action": "manual_review",
+      "trajectory": [
+        {
+          "step": 1,
+          "phase": "initial_scan",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.6661,
+          "timestamp": "2026-10-23T10:56:13.478795+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.67). Outbound probe skipped per policy."
+        },
+        {
+          "step": 2,
+          "phase": "enumeration",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.5305,
+          "timestamp": "2026-10-23T10:56:13.570068+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.53). Outbound probe skipped per policy."
+        },
+        {
+          "step": 3,
+          "phase": "deep_analysis",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.7232,
+          "timestamp": "2026-10-23T10:56:13.658920+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.72). Outbound probe skipped per policy."
+        },
+        {
+          "step": 4,
+          "phase": "verification",
+          "action": "verify_finding",
+          "confidence": 0.6344,
+          "timestamp": "2026-10-23T10:56:13.751220+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'verify_finding' selected by decision model (confidence 0.63). Outbound probe skipped per policy."
+        }
+      ]
+    },
+    "ZAP-10109-9863b3d3": {
+      "total_steps": 4,
+      "final_action": "manual_review",
+      "trajectory": [
+        {
+          "step": 1,
+          "phase": "initial_scan",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.6691,
+          "timestamp": "2026-10-23T10:56:13.853040+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.67). Outbound probe skipped per policy."
+        },
+        {
+          "step": 2,
+          "phase": "enumeration",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.5283,
+          "timestamp": "2026-10-23T10:56:13.974369+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.53). Outbound probe skipped per policy."
+        },
+        {
+          "step": 3,
+          "phase": "deep_analysis",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.7266,
+          "timestamp": "2026-10-23T10:56:14.075814+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.73). Outbound probe skipped per policy."
+        },
+        {
+          "step": 4,
+          "phase": "verification",
+          "action": "verify_finding",
+          "confidence": 0.7001,
+          "timestamp": "2026-10-23T10:56:14.168549+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'verify_finding' selected by decision model (confidence 0.70). Outbound probe skipped per policy."
+        }
+      ]
+    },
+    "ZAP-10109-9f85adef": {
+      "total_steps": 4,
+      "final_action": "manual_review",
+      "trajectory": [
+        {
+          "step": 1,
+          "phase": "initial_scan",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.6691,
+          "timestamp": "2026-10-23T10:56:14.258475+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.67). Outbound probe skipped per policy."
+        },
+        {
+          "step": 2,
+          "phase": "enumeration",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.5283,
+          "timestamp": "2026-10-23T10:56:14.356406+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.53). Outbound probe skipped per policy."
+        },
+        {
+          "step": 3,
+          "phase": "deep_analysis",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.7266,
+          "timestamp": "2026-10-23T10:56:14.460983+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.73). Outbound probe skipped per policy."
+        },
+        {
+          "step": 4,
+          "phase": "verification",
+          "action": "verify_finding",
+          "confidence": 0.7001,
+          "timestamp": "2026-10-23T10:56:14.553849+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'verify_finding' selected by decision model (confidence 0.70). Outbound probe skipped per policy."
+        }
+      ]
+    },
+    "ZAP-10109-e119dbbb": {
+      "total_steps": 4,
+      "final_action": "manual_review",
+      "trajectory": [
+        {
+          "step": 1,
+          "phase": "initial_scan",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.6691,
+          "timestamp": "2026-10-23T10:56:14.659579+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.67). Outbound probe skipped per policy."
+        },
+        {
+          "step": 2,
+          "phase": "enumeration",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.5283,
+          "timestamp": "2026-10-23T10:56:14.752009+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.53). Outbound probe skipped per policy."
+        },
+        {
+          "step": 3,
+          "phase": "deep_analysis",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.7266,
+          "timestamp": "2026-10-23T10:56:14.839110+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.73). Outbound probe skipped per policy."
+        },
+        {
+          "step": 4,
+          "phase": "verification",
+          "action": "verify_finding",
+          "confidence": 0.7001,
+          "timestamp": "2026-10-23T10:56:14.931754+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'verify_finding' selected by decision model (confidence 0.70). Outbound probe skipped per policy."
+        }
+      ]
+    },
+    "ZAP-10109-6c1581ff": {
+      "total_steps": 4,
+      "final_action": "manual_review",
+      "trajectory": [
+        {
+          "step": 1,
+          "phase": "initial_scan",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.6691,
+          "timestamp": "2026-10-23T10:56:15.031956+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.67). Outbound probe skipped per policy."
+        },
+        {
+          "step": 2,
+          "phase": "enumeration",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.5283,
+          "timestamp": "2026-10-23T10:56:15.122369+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.53). Outbound probe skipped per policy."
+        },
+        {
+          "step": 3,
+          "phase": "deep_analysis",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.7266,
+          "timestamp": "2026-10-23T10:56:15.213294+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.73). Outbound probe skipped per policy."
+        },
+        {
+          "step": 4,
+          "phase": "verification",
+          "action": "verify_finding",
+          "confidence": 0.7001,
+          "timestamp": "2026-10-23T10:56:15.326206+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'verify_finding' selected by decision model (confidence 0.70). Outbound probe skipped per policy."
+        }
+      ]
+    },
+    "ZAP-10109-4e071e62": {
+      "total_steps": 4,
+      "final_action": "manual_review",
+      "trajectory": [
+        {
+          "step": 1,
+          "phase": "initial_scan",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.6691,
+          "timestamp": "2026-10-23T10:56:15.420652+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.67). Outbound probe skipped per policy."
+        },
+        {
+          "step": 2,
+          "phase": "enumeration",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.5283,
+          "timestamp": "2026-10-23T10:56:15.532266+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.53). Outbound probe skipped per policy."
+        },
+        {
+          "step": 3,
+          "phase": "deep_analysis",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.7266,
+          "timestamp": "2026-10-23T10:56:15.636632+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.73). Outbound probe skipped per policy."
+        },
+        {
+          "step": 4,
+          "phase": "verification",
+          "action": "verify_finding",
+          "confidence": 0.7001,
+          "timestamp": "2026-10-23T10:56:15.726120+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'verify_finding' selected by decision model (confidence 0.70). Outbound probe skipped per policy."
+        }
+      ]
+    },
+    "ZAP-10049-3-49497442": {
+      "total_steps": 4,
+      "final_action": "manual_review",
+      "trajectory": [
+        {
+          "step": 1,
+          "phase": "initial_scan",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.69,
+          "timestamp": "2026-10-23T10:56:15.822456+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.69). Outbound probe skipped per policy."
+        },
+        {
+          "step": 2,
+          "phase": "enumeration",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.5611,
+          "timestamp": "2026-10-23T10:56:15.916555+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.56). Outbound probe skipped per policy."
+        },
+        {
+          "step": 3,
+          "phase": "deep_analysis",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.7218,
+          "timestamp": "2026-10-23T10:56:16.022869+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.72). Outbound probe skipped per policy."
+        },
+        {
+          "step": 4,
+          "phase": "verification",
+          "action": "verify_finding",
+          "confidence": 0.641,
+          "timestamp": "2026-10-23T10:56:16.137974+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'verify_finding' selected by decision model (confidence 0.64). Outbound probe skipped per policy."
+        }
+      ]
+    },
+    "ZAP-10049-2-00022e0b": {
+      "total_steps": 4,
+      "final_action": "manual_review",
+      "trajectory": [
+        {
+          "step": 1,
+          "phase": "initial_scan",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.6691,
+          "timestamp": "2026-10-23T10:56:16.237365+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.67). Outbound probe skipped per policy."
+        },
+        {
+          "step": 2,
+          "phase": "enumeration",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.5283,
+          "timestamp": "2026-10-23T10:56:16.337614+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.53). Outbound probe skipped per policy."
+        },
+        {
+          "step": 3,
+          "phase": "deep_analysis",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.7266,
+          "timestamp": "2026-10-23T10:56:16.438181+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.73). Outbound probe skipped per policy."
+        },
+        {
+          "step": 4,
+          "phase": "verification",
+          "action": "verify_finding",
+          "confidence": 0.7001,
+          "timestamp": "2026-10-23T10:56:16.532908+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'verify_finding' selected by decision model (confidence 0.70). Outbound probe skipped per policy."
+        }
+      ]
+    },
+    "ZAP-10049-2-b5526969": {
+      "total_steps": 4,
+      "final_action": "manual_review",
+      "trajectory": [
+        {
+          "step": 1,
+          "phase": "initial_scan",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.6691,
+          "timestamp": "2026-10-23T10:56:16.622953+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.67). Outbound probe skipped per policy."
+        },
+        {
+          "step": 2,
+          "phase": "enumeration",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.5283,
+          "timestamp": "2026-10-23T10:56:16.715088+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.53). Outbound probe skipped per policy."
+        },
+        {
+          "step": 3,
+          "phase": "deep_analysis",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.7266,
+          "timestamp": "2026-10-23T10:56:16.812185+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.73). Outbound probe skipped per policy."
+        },
+        {
+          "step": 4,
+          "phase": "verification",
+          "action": "verify_finding",
+          "confidence": 0.7001,
+          "timestamp": "2026-10-23T10:56:16.907619+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'verify_finding' selected by decision model (confidence 0.70). Outbound probe skipped per policy."
+        }
+      ]
+    },
+    "ZAP-10049-2-04d2fba7": {
+      "total_steps": 4,
+      "final_action": "manual_review",
+      "trajectory": [
+        {
+          "step": 1,
+          "phase": "initial_scan",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.6691,
+          "timestamp": "2026-10-23T10:56:16.992677+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.67). Outbound probe skipped per policy."
+        },
+        {
+          "step": 2,
+          "phase": "enumeration",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.5283,
+          "timestamp": "2026-10-23T10:56:17.082874+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.53). Outbound probe skipped per policy."
+        },
+        {
+          "step": 3,
+          "phase": "deep_analysis",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.7266,
+          "timestamp": "2026-10-23T10:56:17.184627+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.73). Outbound probe skipped per policy."
+        },
+        {
+          "step": 4,
+          "phase": "verification",
+          "action": "verify_finding",
+          "confidence": 0.7001,
+          "timestamp": "2026-10-23T10:56:17.279119+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'verify_finding' selected by decision model (confidence 0.70). Outbound probe skipped per policy."
+        }
+      ]
+    },
+    "ZAP-10049-2-e3ed2a6d": {
+      "total_steps": 4,
+      "final_action": "manual_review",
+      "trajectory": [
+        {
+          "step": 1,
+          "phase": "initial_scan",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.6691,
+          "timestamp": "2026-10-23T10:56:17.376271+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.67). Outbound probe skipped per policy."
+        },
+        {
+          "step": 2,
+          "phase": "enumeration",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.5283,
+          "timestamp": "2026-10-23T10:56:17.467923+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.53). Outbound probe skipped per policy."
+        },
+        {
+          "step": 3,
+          "phase": "deep_analysis",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.7266,
+          "timestamp": "2026-10-23T10:56:17.561309+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.73). Outbound probe skipped per policy."
+        },
+        {
+          "step": 4,
+          "phase": "verification",
+          "action": "verify_finding",
+          "confidence": 0.7001,
+          "timestamp": "2026-10-23T10:56:17.692908+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'verify_finding' selected by decision model (confidence 0.70). Outbound probe skipped per policy."
+        }
+      ]
+    },
+    "ZAP-10049-2-154ea823": {
+      "total_steps": 4,
+      "final_action": "manual_review",
+      "trajectory": [
+        {
+          "step": 1,
+          "phase": "initial_scan",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.6691,
+          "timestamp": "2026-10-23T10:56:17.824236+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.67). Outbound probe skipped per policy."
+        },
+        {
+          "step": 2,
+          "phase": "enumeration",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.5283,
+          "timestamp": "2026-10-23T10:56:17.927711+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.53). Outbound probe skipped per policy."
+        },
+        {
+          "step": 3,
+          "phase": "deep_analysis",
+          "action": "inspect_related_endpoint",
+          "confidence": 0.7266,
+          "timestamp": "2026-10-23T10:56:18.039425+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'inspect_related_endpoint' selected by decision model (confidence 0.73). Outbound probe skipped per policy."
+        },
+        {
+          "step": 4,
+          "phase": "verification",
+          "action": "verify_finding",
+          "confidence": 0.7001,
+          "timestamp": "2026-10-23T10:56:18.150067+00:00",
+          "observation": "Offline/Sample mode: Tactical action 'verify_finding' selected by decision model (confidence 0.70). Outbound probe skipped per policy."
+        }
+      ]
+    }
+  },
+  "pipeline_status": "SUCCESS",
+  "stage_statuses": {
+    "stage_0_scanning": "SUCCESS",
+    "stage_1_normalization": "SUCCESS",
+    "stage_6_reporting": "SUCCESS"
+  },
+  "target_url": "http://127.0.0.1:5000/"
+}

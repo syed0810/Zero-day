@@ -1,0 +1,46 @@
+[
+  {
+    "id": "BACKUP-INIT-001",
+    "source_type": "web",
+    "source_tool": "OWASP ZAP",
+    "title": "Baseline Backup Checkpoint",
+    "cwe_id": "CWE-0",
+    "risk_rating": "Informational",
+    "priority": "P4",
+    "affected_asset": {
+      "url": "http://target.local/backup-baseline",
+      "method": "GET",
+      "parameter": ""
+    },
+    "description": "Baseline pipeline backup checkpoint.",
+    "evidence": {
+      "observed_at": null,
+      "attack": "",
+      "evidence": "",
+      "other_info": "Static backup asset",
+      "request": null,
+      "response": null
+    },
+    "verification": {
+      "status": "NEEDS_VERIFICATION",
+      "verified": false,
+      "verified_at": null,
+      "verified_by": null,
+      "method": null,
+      "notes": "Backup record preserved untouched"
+    },
+    "ai_advisory": {
+      "recommendation": "",
+      "reference": "",
+      "remediation_guidance": null,
+      "analysis": null
+    },
+    "provenance": {
+      "scanner": "OWASP ZAP",
+      "source_file": "backup",
+      "plugin_id": "",
+      "alert_ref": "",
+      "source_id": ""
+    }
+  }
+]

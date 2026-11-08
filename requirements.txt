@@ -1,0 +1,8 @@
+# Project Zero-Day Core Dependencies
+scikit-learn==1.9.1
+joblib==1.6.0
+numpy==2.5.2
+pyarrow==26.0.0
+fpdf2==2.8.9
+pytest==9.1.1
+requests==2.34.2
