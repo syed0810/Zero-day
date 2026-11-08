@@ -1,0 +1,387 @@
+[
+  {
+    "id": "ZAP-40018-1ad9f27d",
+    "source_type": "web",
+    "source_tool": "OWASP ZAP",
+    "title": "SQL Injection",
+    "cwe_id": "CWE-89",
+    "risk_rating": "High",
+    "priority": null,
+    "affected_asset": {
+      "url": "http://localhost:3000/api/items?id=1",
+      "method": "GET",
+      "parameter": "id"
+    },
+    "description": "SQL injection may be possible, allowing an attacker to manipulate backend queries.",
+    "evidence": {
+      "observed_at": null,
+      "attack": "1' OR '1'='1",
+      "evidence": "syntax error near 'OR'",
+      "other_info": "Backend database appears to be PostgreSQL.",
+      "request": null,
+      "response": null
+    },
+    "verification": {
+      "status": "NEEDS_VERIFICATION",
+      "verified": false,
+      "verified_at": null,
+      "verified_by": null,
+      "method": null,
+      "notes": "Scanner alert initialized; pending verification evaluation"
+    },
+    "ai_advisory": {
+      "recommendation": "Use parameterized queries or prepared statements to ensure user input cannot modify SQL commands.",
+      "reference": "https://owasp.org/www-community/attacks/SQL_Injection",
+      "remediation_guidance": null,
+      "analysis": null
+    },
+    "provenance": {
+      "scanner": "OWASP ZAP",
+      "provenance_label": "SAMPLE FIXTURE: OWASP ZAP",
+      "source_file": "zap-findings.json",
+      "plugin_id": "40018",
+      "alert_ref": "40018",
+      "source_id": "1",
+      "site_name": "http://target.local",
+      "site_host": "target.local",
+      "site_port": "80",
+      "site_ssl": "false",
+      "raw_uri": "http://target.local/api/items?id=1",
+      "run_id": "run_20261023_070904"
+    },
+    "scanners_detected": [
+      "OWASP ZAP"
+    ],
+    "is_corroborated": false
+  },
+  {
+    "id": "ZAP-40012-ab2810ef",
+    "source_type": "web",
+    "source_tool": "OWASP ZAP",
+    "title": "Cross Site Scripting (Reflected)",
+    "cwe_id": "CWE-79",
+    "risk_rating": "High",
+    "priority": null,
+    "affected_asset": {
+      "url": "http://localhost:3000/search.php?query=test",
+      "method": "GET",
+      "parameter": "query"
+    },
+    "description": "Cross-site Scripting (XSS) is an attack where malicious scripts are injected into otherwise benign websites.",
+    "evidence": {
+      "observed_at": null,
+      "attack": "<script>alert('XSS-1')</script>",
+      "evidence": "<script>alert('XSS-1')</script>",
+      "other_info": "Reflected in search results header",
+      "request": null,
+      "response": null
+    },
+    "verification": {
+      "status": "NEEDS_VERIFICATION",
+      "verified": false,
+      "verified_at": null,
+      "verified_by": null,
+      "method": null,
+      "notes": "Scanner alert initialized; pending verification evaluation"
+    },
+    "ai_advisory": {
+      "recommendation": "Context-aware output encoding should be applied before user data is rendered into HTML.",
+      "reference": "https://owasp.org/www-community/attacks/xss/",
+      "remediation_guidance": null,
+      "analysis": null
+    },
+    "provenance": {
+      "scanner": "OWASP ZAP",
+      "provenance_label": "SAMPLE FIXTURE: OWASP ZAP",
+      "source_file": "zap-findings.json",
+      "plugin_id": "40012",
+      "alert_ref": "40012",
+      "source_id": "1",
+      "site_name": "http://target.local",
+      "site_host": "target.local",
+      "site_port": "80",
+      "site_ssl": "false",
+      "raw_uri": "http://target.local/search.php?query=test",
+      "run_id": "run_20261023_070904"
+    },
+    "scanners_detected": [
+      "OWASP ZAP"
+    ],
+    "is_corroborated": false
+  },
+  {
+    "id": "ZAP-40012-9e7c24fa",
+    "source_type": "web",
+    "source_tool": "OWASP ZAP",
+    "title": "Cross Site Scripting (Reflected)",
+    "cwe_id": "CWE-79",
+    "risk_rating": "High",
+    "priority": null,
+    "affected_asset": {
+      "url": "http://localhost:3000/lookup.php?search=term",
+      "method": "GET",
+      "parameter": "search"
+    },
+    "description": "Cross-site Scripting (XSS) is an attack where malicious scripts are injected into otherwise benign websites.",
+    "evidence": {
+      "observed_at": null,
+      "attack": "<script>alert('XSS-2')</script>",
+      "evidence": "<script>alert('XSS-2')</script>",
+      "other_info": "Reflected in input value attribute",
+      "request": null,
+      "response": null
+    },
+    "verification": {
+      "status": "NEEDS_VERIFICATION",
+      "verified": false,
+      "verified_at": null,
+      "verified_by": null,
+      "method": null,
+      "notes": "Scanner alert initialized; pending verification evaluation"
+    },
+    "ai_advisory": {
+      "recommendation": "Context-aware output encoding should be applied before user data is rendered into HTML.",
+      "reference": "https://owasp.org/www-community/attacks/xss/",
+      "remediation_guidance": null,
+      "analysis": null
+    },
+    "provenance": {
+      "scanner": "OWASP ZAP",
+      "provenance_label": "SAMPLE FIXTURE: OWASP ZAP",
+      "source_file": "zap-findings.json",
+      "plugin_id": "40012",
+      "alert_ref": "40012",
+      "source_id": "1",
+      "site_name": "http://target.local",
+      "site_host": "target.local",
+      "site_port": "80",
+      "site_ssl": "false",
+      "raw_uri": "http://target.local/lookup.php?search=term",
+      "run_id": "run_20261023_070904"
+    },
+    "scanners_detected": [
+      "OWASP ZAP"
+    ],
+    "is_corroborated": false
+  },
+  {
+    "id": "ZAP-10020-5fa192d8",
+    "source_type": "web",
+    "source_tool": "OWASP ZAP",
+    "title": "X-Frame-Options Header Not Set",
+    "cwe_id": "CWE-1021",
+    "risk_rating": "Medium",
+    "priority": null,
+    "affected_asset": {
+      "url": "http://localhost:3000/login",
+      "method": "GET",
+      "parameter": ""
+    },
+    "description": "The response does not include either Content-Security-Policy with 'frame-ancestors' directive or X-Frame-Options to protect against Clickjacking.",
+    "evidence": {
+      "observed_at": null,
+      "attack": "",
+      "evidence": "",
+      "other_info": "Missing header on sensitive authentication page",
+      "request": null,
+      "response": null
+    },
+    "verification": {
+      "status": "NEEDS_VERIFICATION",
+      "verified": false,
+      "verified_at": null,
+      "verified_by": null,
+      "method": null,
+      "notes": "Scanner alert initialized; pending verification evaluation"
+    },
+    "ai_advisory": {
+      "recommendation": "Configure the X-Frame-Options HTTP response header to 'DENY' or 'SAMEORIGIN'.",
+      "reference": "https://cheatsheetseries.owasp.org/cheatsheets/Clickjacking_Defense_Cheat_Sheet.html",
+      "remediation_guidance": null,
+      "analysis": null
+    },
+    "provenance": {
+      "scanner": "OWASP ZAP",
+      "provenance_label": "SAMPLE FIXTURE: OWASP ZAP",
+      "source_file": "zap-findings.json",
+      "plugin_id": "10020",
+      "alert_ref": "10020",
+      "source_id": "1",
+      "site_name": "http://target.local",
+      "site_host": "target.local",
+      "site_port": "80",
+      "site_ssl": "false",
+      "raw_uri": "http://target.local/login",
+      "run_id": "run_20261023_070904"
+    },
+    "scanners_detected": [
+      "OWASP ZAP"
+    ],
+    "is_corroborated": false
+  },
+  {
+    "id": "ZAP-10020-259b5e54",
+    "source_type": "web",
+    "source_tool": "OWASP ZAP",
+    "title": "X-Frame-Options Header Not Set",
+    "cwe_id": "CWE-1021",
+    "risk_rating": "Medium",
+    "priority": null,
+    "affected_asset": {
+      "url": "http://localhost:3000/dashboard",
+      "method": "GET",
+      "parameter": ""
+    },
+    "description": "The response does not include either Content-Security-Policy with 'frame-ancestors' directive or X-Frame-Options to protect against Clickjacking.",
+    "evidence": {
+      "observed_at": null,
+      "attack": "",
+      "evidence": "",
+      "other_info": "Missing header on user dashboard",
+      "request": null,
+      "response": null
+    },
+    "verification": {
+      "status": "NEEDS_VERIFICATION",
+      "verified": false,
+      "verified_at": null,
+      "verified_by": null,
+      "method": null,
+      "notes": "Scanner alert initialized; pending verification evaluation"
+    },
+    "ai_advisory": {
+      "recommendation": "Configure the X-Frame-Options HTTP response header to 'DENY' or 'SAMEORIGIN'.",
+      "reference": "https://cheatsheetseries.owasp.org/cheatsheets/Clickjacking_Defense_Cheat_Sheet.html",
+      "remediation_guidance": null,
+      "analysis": null
+    },
+    "provenance": {
+      "scanner": "OWASP ZAP",
+      "provenance_label": "SAMPLE FIXTURE: OWASP ZAP",
+      "source_file": "zap-findings.json",
+      "plugin_id": "10020",
+      "alert_ref": "10020",
+      "source_id": "1",
+      "site_name": "http://target.local",
+      "site_host": "target.local",
+      "site_port": "80",
+      "site_ssl": "false",
+      "raw_uri": "http://target.local/dashboard",
+      "run_id": "run_20261023_070904"
+    },
+    "scanners_detected": [
+      "OWASP ZAP"
+    ],
+    "is_corroborated": false
+  },
+  {
+    "id": "ZAP-10038-4dcf0159",
+    "source_type": "web",
+    "source_tool": "OWASP ZAP",
+    "title": "Content Security Policy (CSP) Header Not Set",
+    "cwe_id": "CWE-693",
+    "risk_rating": "Low",
+    "priority": null,
+    "affected_asset": {
+      "url": "http://localhost:3000/",
+      "method": "GET",
+      "parameter": ""
+    },
+    "description": "Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks.",
+    "evidence": {
+      "observed_at": null,
+      "attack": "",
+      "evidence": "",
+      "other_info": "",
+      "request": null,
+      "response": null
+    },
+    "verification": {
+      "status": "NEEDS_VERIFICATION",
+      "verified": false,
+      "verified_at": null,
+      "verified_by": null,
+      "method": null,
+      "notes": "Scanner alert initialized; pending verification evaluation"
+    },
+    "ai_advisory": {
+      "recommendation": "Ensure that your web server, application server, load balancer, etc. is configured to set the Content-Security-Policy header.",
+      "reference": "https://content-security-policy.com/",
+      "remediation_guidance": null,
+      "analysis": null
+    },
+    "provenance": {
+      "scanner": "OWASP ZAP",
+      "provenance_label": "SAMPLE FIXTURE: OWASP ZAP",
+      "source_file": "zap-findings.json",
+      "plugin_id": "10038",
+      "alert_ref": "10038",
+      "source_id": "1",
+      "site_name": "http://target.local",
+      "site_host": "target.local",
+      "site_port": "80",
+      "site_ssl": "false",
+      "raw_uri": "http://target.local/",
+      "run_id": "run_20261023_070904"
+    },
+    "scanners_detected": [
+      "OWASP ZAP"
+    ],
+    "is_corroborated": false
+  },
+  {
+    "id": "ZAP-10054-51e92f3f",
+    "source_type": "web",
+    "source_tool": "OWASP ZAP",
+    "title": "Cookie without SameSite Attribute",
+    "cwe_id": "CWE-1275",
+    "risk_rating": "Informational",
+    "priority": null,
+    "affected_asset": {
+      "url": "http://localhost:3000/auth/session",
+      "method": "POST",
+      "parameter": "session_id"
+    },
+    "description": "A cookie has been set without the SameSite attribute, which means that the cookie can be sent as a result of a 'cross-site' request.",
+    "evidence": {
+      "observed_at": null,
+      "attack": "",
+      "evidence": "Set-Cookie: session_id=abc123",
+      "other_info": "",
+      "request": null,
+      "response": null
+    },
+    "verification": {
+      "status": "NEEDS_VERIFICATION",
+      "verified": false,
+      "verified_at": null,
+      "verified_by": null,
+      "method": null,
+      "notes": "Scanner alert initialized; pending verification evaluation"
+    },
+    "ai_advisory": {
+      "recommendation": "Ensure that the SameSite attribute is set to 'lax' or 'strict' for all sensitive cookies.",
+      "reference": "https://owasp.org/www-community/SameSite",
+      "remediation_guidance": null,
+      "analysis": null
+    },
+    "provenance": {
+      "scanner": "OWASP ZAP",
+      "provenance_label": "SAMPLE FIXTURE: OWASP ZAP",
+      "source_file": "zap-findings.json",
+      "plugin_id": "10054",
+      "alert_ref": "10054",
+      "source_id": "1",
+      "site_name": "http://target.local",
+      "site_host": "target.local",
+      "site_port": "80",
+      "site_ssl": "false",
+      "raw_uri": "http://target.local/auth/session",
+      "run_id": "run_20261023_070904"
+    },
+    "scanners_detected": [
+      "OWASP ZAP"
+    ],
+    "is_corroborated": false
+  }
+]
